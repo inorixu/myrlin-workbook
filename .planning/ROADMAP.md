@@ -32,12 +32,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. User can navigate between all tab screens and nested routes using the bottom tab bar and stack navigation
   4. All 13 themes produce visually identical color output compared to the web CSS equivalents
   5. Maestro can run a basic flow test on iOS Simulator and capture a screenshot
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Expo project scaffold, EAS Build pipeline, dev builds on iOS and Android
-- [ ] 01-02: Navigation shell, theme system with MMKV, custom fonts, shared component library
-- [ ] 01-03: Maestro test infrastructure and theme validation
+- [ ] 01-01-PLAN.md - Expo scaffold, EAS Build config, theme type system, 13 theme tokens from CSS, MMKV theme store
+- [ ] 01-02-PLAN.md - Navigation shell with 5 tabs, font loading with splash gate, 17 shared UI components
+- [ ] 01-03-PLAN.md - Maestro test infrastructure with 3 flow tests, Phase 1 verification checkpoint
 
 ### Phase 2: Connection and Auth
 **Goal**: User can pair their phone with a Myrlin server via QR code or manual URL, authenticate, and switch between multiple connected servers
@@ -148,7 +148,7 @@ Note: Phases 4, 5, and 6 all depend on Phase 3 but not on each other. They can b
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Not started | - |
+| 1. Foundation | 0/3 | Planned | - |
 | 2. Connection and Auth | 0/3 | Not started | - |
 | 3. Sessions and Workspaces | 0/4 | Not started | - |
 | 4. Terminal | 0/3 | Not started | - |
