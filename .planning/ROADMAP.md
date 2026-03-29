@@ -132,12 +132,12 @@ Plans:
   2. Deep links (myrlin://session/xyz) open the correct screen from outside the app
   3. App degrades gracefully offline showing cached state with a reconnection queue that replays when connectivity returns
   4. Maestro flow tests exist for every screen, Storybook stories exist for every shared component, and screenshot tests validate theme consistency
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 07-01: Haptic feedback, pull-to-refresh, native share sheet polish, deep links
-- [ ] 07-02: Offline graceful degradation and reconnection queue
-- [ ] 07-03: Maestro flows for all screens, Storybook stories, screenshot theme tests, API integration tests
+- [ ] 07-01-PLAN.md - Haptic feedback utility, wire haptics into all UI components, pull-to-refresh on tasks, deep link scheme config
+- [ ] 07-02-PLAN.md - Offline graceful degradation with OfflineQueue, NetInfo monitoring, OfflineBanner, mutation queueing
+- [ ] 07-03-PLAN.md - Maestro flows for all screens, Storybook stories for 17 components, theme screenshot tests, API integration tests
 
 ## Progress
 
