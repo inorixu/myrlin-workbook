@@ -54,12 +54,12 @@
 
 ### SSE Enhancement
 
-- [ ] **SSE-01**: SSE sends heartbeat comment (`: heartbeat`) every 30 seconds
-- [ ] **SSE-02**: SSE client registry tracks device metadata (deviceId, subscriptions)
-- [ ] **SSE-03**: SSE supports deviceId query param for device-specific filtering
+- [x] **SSE-01**: SSE sends heartbeat comment (`: heartbeat`) every 30 seconds
+- [x] **SSE-02**: SSE client registry tracks device metadata (deviceId, subscriptions)
+- [x] **SSE-03**: SSE supports deviceId query param for device-specific filtering
 - [ ] **SSE-04**: SSE filters workspace-scoped events by device's workspace subscriptions
-- [ ] **SSE-05**: Global events (settings, server status) always sent regardless of subscriptions
-- [ ] **SSE-06**: Dead SSE connections cleaned up within 60 seconds
+- [x] **SSE-05**: Global events (settings, server status) always sent regardless of subscriptions
+- [x] **SSE-06**: Dead SSE connections cleaned up within 60 seconds
 
 ### Workspace Subscriptions
 
@@ -178,12 +178,12 @@
 | PUSH-08 | Phase 10 | Pending |
 | PUSH-09 | Phase 10 | Pending |
 | PUSH-10 | Phase 10 | Pending |
-| SSE-01 | Phase 11 | Pending |
-| SSE-02 | Phase 11 | Pending |
-| SSE-03 | Phase 11 | Pending |
+| SSE-01 | Phase 11 | Complete |
+| SSE-02 | Phase 11 | Complete |
+| SSE-03 | Phase 11 | Complete |
 | SSE-04 | Phase 11 | Pending |
-| SSE-05 | Phase 11 | Pending |
-| SSE-06 | Phase 11 | Pending |
+| SSE-05 | Phase 11 | Complete |
+| SSE-06 | Phase 11 | Complete |
 | WSUB-01 | Phase 11 | Pending |
 | WSUB-02 | Phase 11 | Pending |
 | WSUB-03 | Phase 11 | Pending |

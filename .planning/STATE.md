@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Mobile App
-status: completed
-stopped_at: Completed 08-03-PLAN.md
-last_updated: "2026-03-29T08:23:58.925Z"
-last_activity: 2026-03-29 - Completed Plan 08-03 (token persistence and device management tests)
+status: in-progress
+stopped_at: Completed 11-01-PLAN.md
+last_updated: "2026-03-29T08:37:00Z"
+last_activity: 2026-03-29 - Completed Plan 11-01 (SSE heartbeat and device-aware client registry)
 progress:
   total_phases: 13
   completed_phases: 8
-  total_plans: 26
-  completed_plans: 26
-  percent: 100
+  total_plans: 37
+  completed_plans: 27
+  percent: 73
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-29)
 
 **Core value:** Self-hosted Myrlin server fully supports mobile clients with persistent auth, device management, push notifications, and optimized data sync.
-**Current focus:** Phase 8: Token Persistence and Device Registry
+**Current focus:** Phase 11: SSE and Sync Optimization
 
 ## Current Position
 
-Phase: 8 of 13 (Token Persistence and Device Registry) - first phase of v1.1
-Plan: 3 of 3 in current phase (COMPLETE)
-Status: Phase Complete
-Last activity: 2026-03-29 - Completed Plan 08-03 (token persistence and device management tests)
+Phase: 11 of 13 (SSE and Sync Optimization)
+Plan: 1 of 3 in current phase (COMPLETE)
+Status: In Progress
+Last activity: 2026-03-29 - Completed Plan 11-01 (SSE heartbeat and device-aware client registry)
 
-Progress: [██████████] 100% (Phase 8)
+Progress: [███████░░░] 73% (27/37 plans)
 
 ## Performance Metrics
 
@@ -46,6 +46,7 @@ Progress: [██████████] 100% (Phase 8)
 | 08    | 01   | 3min     | 2     | 4     |
 | Phase 08 P02 | 2min | 2 tasks | 2 files |
 | Phase 08 P03 | 4min | 2 tasks | 2 files |
+| 11    | 01   | 3min     | 1     | 1     |
 
 ## Accumulated Context
 
@@ -64,6 +65,10 @@ Progress: [██████████] 100% (Phase 8)
 - [Phase 08]: Test push sends to single device via Expo API, not broadcast
 - [Phase 08]: Module-level reload pattern for testing restart survival (faster than full server restart)
 
+- 11-01: SSE heartbeat uses comment syntax (`: heartbeat`) not data events, avoids triggering onmessage
+- 11-01: All SSE timers call .unref() so Node process exits cleanly
+- 11-01: GLOBAL_EVENT_TYPES kept module-scoped (not exported), Plan 11-02 uses it in same file
+
 ### Pending Todos
 
 None yet.
@@ -74,6 +79,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T08:22:57.551Z
-Stopped at: Completed 08-03-PLAN.md
+Last session: 2026-03-29T08:37:00Z
+Stopped at: Completed 11-01-PLAN.md
 Resume file: None
