@@ -25,13 +25,13 @@
 
 ### Pairing Enhancement
 
-- [ ] **PAIR-01**: POST /api/auth/pair returns deviceId and server capabilities in response
-- [ ] **PAIR-02**: Pair endpoint stores device metadata (name, platform, appVersion) in pairedDevices
-- [ ] **PAIR-03**: GET /api/auth/pairing-code detects LAN IP from network interfaces
-- [ ] **PAIR-04**: GET /api/auth/pairing-code detects Tailscale IP (100.x.x.x) if present
-- [ ] **PAIR-05**: GET /api/auth/pairing-code uses configured tunnel URL if available
-- [ ] **PAIR-06**: QR payload includes all available URLs so mobile can try each
-- [ ] **PAIR-07**: Server info endpoint (GET /api/server-info) returns capabilities, URLs, and stats without auth
+- [x] **PAIR-01**: POST /api/auth/pair returns deviceId and server capabilities in response
+- [x] **PAIR-02**: Pair endpoint stores device metadata (name, platform, appVersion) in pairedDevices
+- [x] **PAIR-03**: GET /api/auth/pairing-code detects LAN IP from network interfaces
+- [x] **PAIR-04**: GET /api/auth/pairing-code detects Tailscale IP (100.x.x.x) if present
+- [x] **PAIR-05**: GET /api/auth/pairing-code uses configured tunnel URL if available
+- [x] **PAIR-06**: QR payload includes all available URLs so mobile can try each
+- [x] **PAIR-07**: Server info endpoint (GET /api/server-info) returns capabilities, URLs, and stats without auth
 
 ### CORS and Network
 
@@ -158,13 +158,13 @@
 | DEVC-04 | Phase 8 | Complete |
 | DEVC-05 | Phase 8 | Complete |
 | DEVC-06 | Phase 8 | Complete |
-| PAIR-01 | Phase 9 | Pending |
-| PAIR-02 | Phase 9 | Pending |
-| PAIR-03 | Phase 9 | Pending |
-| PAIR-04 | Phase 9 | Pending |
-| PAIR-05 | Phase 9 | Pending |
-| PAIR-06 | Phase 9 | Pending |
-| PAIR-07 | Phase 9 | Pending |
+| PAIR-01 | Phase 9 | Complete |
+| PAIR-02 | Phase 9 | Complete |
+| PAIR-03 | Phase 9 | Complete |
+| PAIR-04 | Phase 9 | Complete |
+| PAIR-05 | Phase 9 | Complete |
+| PAIR-06 | Phase 9 | Complete |
+| PAIR-07 | Phase 9 | Complete |
 | CORS-01 | Phase 8 | Complete |
 | CORS-02 | Phase 8 | Complete |
 | CORS-03 | Phase 8 | Complete |

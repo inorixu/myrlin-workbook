@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Mobile App
-status: in-progress
-stopped_at: Completed 11-01-PLAN.md
-last_updated: "2026-03-29T08:37:00Z"
+status: executing
+stopped_at: Completed 09-01-PLAN.md
+last_updated: "2026-03-29T08:36:55.257Z"
 last_activity: 2026-03-29 - Completed Plan 11-01 (SSE heartbeat and device-aware client registry)
 progress:
   total_phases: 13
   completed_phases: 8
   total_plans: 37
-  completed_plans: 27
+  completed_plans: 29
   percent: 73
 ---
 
@@ -47,6 +47,7 @@ Progress: [███████░░░] 73% (27/37 plans)
 | Phase 08 P02 | 2min | 2 tasks | 2 files |
 | Phase 08 P03 | 4min | 2 tasks | 2 files |
 | 11    | 01   | 3min     | 1     | 1     |
+| Phase 09 P01 | 2min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,7 @@ Progress: [███████░░░] 73% (27/37 plans)
 - 11-01: SSE heartbeat uses comment syntax (`: heartbeat`) not data events, avoids triggering onmessage
 - 11-01: All SSE timers call .unref() so Node process exits cleanly
 - 11-01: GLOBAL_EVENT_TYPES kept module-scoped (not exported), Plan 11-02 uses it in same file
+- [Phase 09]: Tailscale detection uses 100.x.x.x prefix match; primary URL order: custom > tunnel > lan > local
 
 ### Pending Todos
 
@@ -79,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T08:37:00Z
-Stopped at: Completed 11-01-PLAN.md
+Last session: 2026-03-29T08:36:55.253Z
+Stopped at: Completed 09-01-PLAN.md
 Resume file: None
