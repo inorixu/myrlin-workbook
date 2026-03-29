@@ -67,8 +67,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **TERM-06**: User can upload image from camera or gallery to session
 - [x] **TERM-07**: User can use voice input (dictation) to type commands
 - [x] **TERM-08**: Terminal applies correct theme colors matching current app theme
-- [ ] **TERM-09**: Terminal reader mode (full-screen scrollable text view)
-- [ ] **TERM-10**: User can swipe between open terminal sessions (carousel)
+- [x] **TERM-09**: Terminal reader mode (full-screen scrollable text view)
+- [x] **TERM-10**: User can swipe between open terminal sessions (carousel)
 - [x] **TERM-11**: Activity indicator visible in terminal header
 - [x] **TERM-12**: Keyboard avoidance works correctly (input stays above keyboard)
 
@@ -278,8 +278,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TERM-06 | Phase 4 | Complete |
 | TERM-07 | Phase 4 | Complete |
 | TERM-08 | Phase 4 | Complete |
-| TERM-09 | Phase 4 | Pending |
-| TERM-10 | Phase 4 | Pending |
+| TERM-09 | Phase 4 | Complete |
+| TERM-10 | Phase 4 | Complete |
 | TERM-11 | Phase 4 | Complete |
 | TERM-12 | Phase 4 | Complete |
 | COST-01 | Phase 5 | Pending |
