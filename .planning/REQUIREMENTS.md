@@ -40,22 +40,22 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **SESS-01**: User can view all sessions in a scrollable list with real-time status (SSE)
 - [x] **SESS-02**: User can filter sessions by workspace using filter chips
-- [ ] **SESS-03**: User can search sessions by name or topic
-- [ ] **SESS-04**: User can view session detail (metadata, cost, logs, subagents, tags)
-- [ ] **SESS-05**: User can start, stop, and restart a session
-- [ ] **SESS-06**: User can create a new session (name, workspace, directory, command, model, template)
-- [ ] **SESS-07**: User can rename a session
-- [ ] **SESS-08**: User can delete (hide) a session
-- [ ] **SESS-09**: User can move a session to a different workspace
-- [ ] **SESS-10**: User can add and remove tags on a session
-- [ ] **SESS-11**: User can view and use session templates for quick-launch
-- [ ] **SESS-12**: User can auto-title a session (AI-generated)
-- [ ] **SESS-13**: User can summarize a session (AI-generated)
+- [x] **SESS-03**: User can search sessions by name or topic
+- [x] **SESS-04**: User can view session detail (metadata, cost, logs, subagents, tags)
+- [x] **SESS-05**: User can start, stop, and restart a session
+- [x] **SESS-06**: User can create a new session (name, workspace, directory, command, model, template)
+- [x] **SESS-07**: User can rename a session
+- [x] **SESS-08**: User can delete (hide) a session
+- [x] **SESS-09**: User can move a session to a different workspace
+- [x] **SESS-10**: User can add and remove tags on a session
+- [x] **SESS-11**: User can view and use session templates for quick-launch
+- [x] **SESS-12**: User can auto-title a session (AI-generated)
+- [x] **SESS-13**: User can summarize a session (AI-generated)
 - [x] **SESS-14**: User can view recently active sessions
-- [ ] **SESS-15**: User can save a session as a template
+- [x] **SESS-15**: User can save a session as a template
 - [x] **SESS-16**: Session cards show activity indicator (Reading, Writing, Running, etc.)
 - [x] **SESS-17**: Session cards show needs-input badge when awaiting user response
-- [ ] **SESS-18**: User can bulk stop sessions via session manager
+- [x] **SESS-18**: User can bulk stop sessions via session manager
 
 ### Terminal
 
@@ -242,22 +242,22 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SRVR-02 | Phase 2 | Complete |
 | SESS-01 | Phase 3 | Complete |
 | SESS-02 | Phase 3 | Complete |
-| SESS-03 | Phase 3 | Pending |
-| SESS-04 | Phase 3 | Pending |
-| SESS-05 | Phase 3 | Pending |
-| SESS-06 | Phase 3 | Pending |
-| SESS-07 | Phase 3 | Pending |
-| SESS-08 | Phase 3 | Pending |
-| SESS-09 | Phase 3 | Pending |
-| SESS-10 | Phase 3 | Pending |
-| SESS-11 | Phase 3 | Pending |
-| SESS-12 | Phase 3 | Pending |
-| SESS-13 | Phase 3 | Pending |
+| SESS-03 | Phase 3 | Complete |
+| SESS-04 | Phase 3 | Complete |
+| SESS-05 | Phase 3 | Complete |
+| SESS-06 | Phase 3 | Complete |
+| SESS-07 | Phase 3 | Complete |
+| SESS-08 | Phase 3 | Complete |
+| SESS-09 | Phase 3 | Complete |
+| SESS-10 | Phase 3 | Complete |
+| SESS-11 | Phase 3 | Complete |
+| SESS-12 | Phase 3 | Complete |
+| SESS-13 | Phase 3 | Complete |
 | SESS-14 | Phase 3 | Complete |
-| SESS-15 | Phase 3 | Pending |
+| SESS-15 | Phase 3 | Complete |
 | SESS-16 | Phase 3 | Complete |
 | SESS-17 | Phase 3 | Complete |
-| SESS-18 | Phase 3 | Pending |
+| SESS-18 | Phase 3 | Complete |
 | WORK-01 | Phase 3 | Complete |
 | WORK-02 | Phase 3 | Complete |
 | WORK-03 | Phase 3 | Complete |
