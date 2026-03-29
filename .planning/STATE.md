@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 03-02-PLAN.md (Session detail and CRUD)
-last_updated: "2026-03-29T01:11:19.271Z"
-last_activity: 2026-03-29 - Completed 03-04 (Search, quick switcher, and conflict center)
+stopped_at: Completed 04-02-PLAN.md (Terminal input and interaction)
+last_updated: "2026-03-29T01:38:25.665Z"
+last_activity: 2026-03-29 - Completed 04-01 (Hybrid WebView terminal renderer)
 progress:
   total_phases: 7
   completed_phases: 3
-  total_plans: 10
-  completed_plans: 11
+  total_plans: 13
+  completed_plans: 12
   percent: 65
 ---
 
@@ -59,6 +59,7 @@ Progress: [██████▌░░░] 65%
 | Phase 03 P03 | 4m | 2 tasks | 5 files |
 | Phase 03 P02 | 6m | 2 tasks | 8 files |
 | Phase 04 P01 | 6m | 2 tasks | 13 files |
+| Phase 04-terminal P02 | 3m | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -103,6 +104,8 @@ Recent decisions affecting current work:
 - 04-01: WebSocket inside WebView (not bridged through RN) for PTY data performance
 - 04-01: Asset.fromModule for reliable HTML asset loading across iOS/Android
 - 04-01: Bridge callbacks in refs to prevent stale closures in WebView onMessage
+- [Phase 04-terminal]: Two-step pendingTextAction ref pattern for async bridge copy/share
+- [Phase 04-terminal]: KeyboardProvider wraps TerminalScreen locally (not app root) to isolate changes
 
 ### Pending Todos
 
@@ -116,6 +119,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T01:31:40Z
-Stopped at: Completed 04-01-PLAN.md (Hybrid WebView terminal renderer)
+Last session: 2026-03-29T01:38:25.662Z
+Stopped at: Completed 04-02-PLAN.md (Terminal input and interaction)
 Resume file: None
