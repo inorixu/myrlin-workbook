@@ -146,13 +146,85 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (Populated by roadmapper) | | |
+| TOKN-01 | Phase 8 | Pending |
+| TOKN-02 | Phase 8 | Pending |
+| TOKN-03 | Phase 8 | Pending |
+| TOKN-04 | Phase 8 | Pending |
+| TOKN-05 | Phase 12 | Pending |
+| TOKN-06 | Phase 12 | Pending |
+| DEVC-01 | Phase 8 | Pending |
+| DEVC-02 | Phase 8 | Pending |
+| DEVC-03 | Phase 8 | Pending |
+| DEVC-04 | Phase 8 | Pending |
+| DEVC-05 | Phase 8 | Pending |
+| DEVC-06 | Phase 8 | Pending |
+| PAIR-01 | Phase 9 | Pending |
+| PAIR-02 | Phase 9 | Pending |
+| PAIR-03 | Phase 9 | Pending |
+| PAIR-04 | Phase 9 | Pending |
+| PAIR-05 | Phase 9 | Pending |
+| PAIR-06 | Phase 9 | Pending |
+| PAIR-07 | Phase 9 | Pending |
+| CORS-01 | Phase 8 | Pending |
+| CORS-02 | Phase 8 | Pending |
+| CORS-03 | Phase 8 | Pending |
+| PUSH-01 | Phase 10 | Pending |
+| PUSH-02 | Phase 10 | Pending |
+| PUSH-03 | Phase 10 | Pending |
+| PUSH-04 | Phase 10 | Pending |
+| PUSH-05 | Phase 10 | Pending |
+| PUSH-06 | Phase 10 | Pending |
+| PUSH-07 | Phase 10 | Pending |
+| PUSH-08 | Phase 10 | Pending |
+| PUSH-09 | Phase 10 | Pending |
+| PUSH-10 | Phase 10 | Pending |
+| SSE-01 | Phase 11 | Pending |
+| SSE-02 | Phase 11 | Pending |
+| SSE-03 | Phase 11 | Pending |
+| SSE-04 | Phase 11 | Pending |
+| SSE-05 | Phase 11 | Pending |
+| SSE-06 | Phase 11 | Pending |
+| WSUB-01 | Phase 11 | Pending |
+| WSUB-02 | Phase 11 | Pending |
+| WSUB-03 | Phase 11 | Pending |
+| WSUB-04 | Phase 11 | Pending |
+| SYNC-01 | Phase 11 | Pending |
+| SYNC-02 | Phase 11 | Pending |
+| SYNC-03 | Phase 11 | Pending |
+| SYNC-04 | Phase 11 | Pending |
+| PAGE-01 | Phase 12 | Pending |
+| PAGE-02 | Phase 12 | Pending |
+| PAGE-03 | Phase 12 | Pending |
+| PAGE-04 | Phase 12 | Pending |
+| PAGE-05 | Phase 12 | Pending |
+| PAGE-06 | Phase 12 | Pending |
+| PAGE-07 | Phase 12 | Pending |
+| DWUI-01 | Phase 9 | Pending |
+| DWUI-02 | Phase 9 | Pending |
+| DWUI-03 | Phase 9 | Pending |
+| DWUI-04 | Phase 9 | Pending |
+| DWUI-05 | Phase 9 | Pending |
+| DWUI-06 | Phase 9 | Pending |
+| DWUI-07 | Phase 9 | Pending |
+| DWUI-08 | Phase 9 | Pending |
+| SCRL-01 | Phase 12 | Pending |
+| SCRL-02 | Phase 12 | Pending |
+| SCRL-03 | Phase 12 | Pending |
+| ERRR-01 | Phase 13 | Pending |
+| ERRR-02 | Phase 13 | Pending |
+| ERRR-03 | Phase 13 | Pending |
+| MTST-01 | Phase 8 | Pending |
+| MTST-02 | Phase 8 | Pending |
+| MTST-03 | Phase 10 | Pending |
+| MTST-04 | Phase 11 | Pending |
+| MTST-05 | Phase 12 | Pending |
+| MTST-06 | Phase 11 | Pending |
 
 **Coverage:**
-- v1.1 requirements: 67 total (14 categories)
-- Mapped to phases: 0 (awaiting roadmap)
-- Unmapped: 67
+- v1.1 requirements: 73 total (13 categories)
+- Mapped to phases: 73/73
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-29*
-*Last updated: 2026-03-29 after initial definition*
+*Last updated: 2026-03-29 after roadmap creation (traceability populated)*
