@@ -116,12 +116,12 @@ Plans:
   2. Tapping a push notification navigates directly to the relevant screen via deep link
   3. User sees in-app toast notifications for all actions (create, update, delete, errors)
   4. User can configure all settings including theme picker, server management, notification preferences, and app update check
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 06-01: Server push endpoints (register, unregister, dispatch via Expo Push API)
-- [ ] 06-02: Mobile push registration, notification handling, deep link navigation, in-app toasts
-- [ ] 06-03: Settings screen (all settings, theme picker, server management, notification prefs, update check)
+- [ ] 06-01-PLAN.md - Server push endpoints (register, unregister, dispatch via Expo Push API)
+- [ ] 06-02-PLAN.md - Mobile push registration, notification handling, deep link navigation, in-app toasts
+- [ ] 06-03-PLAN.md - Settings screen (all settings, theme picker, server management, notification prefs, update check)
 
 ### Phase 7: Platform Polish and Testing
 **Goal**: App feels native with haptic feedback, deep links, offline resilience, and comprehensive test coverage across all screens
