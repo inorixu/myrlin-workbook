@@ -99,13 +99,13 @@ Plans:
   2. User can view, add, edit, delete workspace doc items across all sections (notes, goals, tasks, roadmap, rules) with checkbox toggling
   3. User can view tasks in kanban board (5 columns) or list mode, drag cards between columns, create tasks, set blockers, assign models, manage tags, and create or view GitHub PRs
   4. User can view system CPU/memory usage and per-session resource consumption, and kill processes
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 05-01: Cost dashboard (summary, time filters, model/workspace breakdowns, charts, cache savings)
-- [ ] 05-02: Workspace docs (CRUD for all sections, feature board with kanban)
-- [ ] 05-03: Task kanban board (drag-drop, list mode, task detail, PR integration, AI spinoff)
-- [ ] 05-04: Resource monitor (system stats, per-session stats, process kill)
+- [ ] 05-01-PLAN.md - Cost dashboard with Victory Native timeline chart, period filters, model/workspace breakdowns, top sessions, cache savings
+- [ ] 05-02-PLAN.md - Workspace docs CRUD (notes, goals, tasks, roadmap, rules), collapsible sections, checkbox toggling, feature board kanban
+- [ ] 05-03-PLAN.md - Task kanban board (5 columns), list view, drag-drop, task detail with PR integration, merge/reject, AI spinoff
+- [ ] 05-04-PLAN.md - Resource monitor with system CPU/memory stats, per-session resources, process kill
 
 ### Phase 6: Notifications and Settings
 **Goal**: User receives push notifications for important session events and can configure all app and server settings
