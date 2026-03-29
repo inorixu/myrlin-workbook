@@ -171,10 +171,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Testing
 
-- [ ] **TEST-01**: Maestro flow tests exist for every screen
-- [ ] **TEST-02**: Storybook stories exist for every shared component
-- [ ] **TEST-03**: Screenshot comparison validates theme consistency
-- [ ] **TEST-04**: Integration tests validate API client against real server
+- [x] **TEST-01**: Maestro flow tests exist for every screen
+- [x] **TEST-02**: Storybook stories exist for every shared component
+- [x] **TEST-03**: Screenshot comparison validates theme consistency
+- [x] **TEST-04**: Integration tests validate API client against real server
 
 ## v2 Requirements
 
@@ -332,10 +332,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PLAT-03 | Phase 7 | Complete |
 | PLAT-04 | Phase 7 | Complete |
 | PLAT-05 | Phase 7 | Complete |
-| TEST-01 | Phase 7 | Pending |
-| TEST-02 | Phase 7 | Pending |
-| TEST-03 | Phase 7 | Pending |
-| TEST-04 | Phase 7 | Pending |
+| TEST-01 | Phase 7 | Complete |
+| TEST-02 | Phase 7 | Complete |
+| TEST-03 | Phase 7 | Complete |
+| TEST-04 | Phase 7 | Complete |
 
 **Coverage:**
 - v1 requirements: 118 total (17 categories)
