@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-02-PLAN.md (Auth screens) and 02-03-PLAN.md (Connection features)
-last_updated: "2026-03-29T00:36:26.045Z"
-last_activity: "2026-03-29 - Completed 02-02 (Auth screens: onboarding, QR scan, manual connect, login)"
+stopped_at: Completed 03-01-PLAN.md (Data foundation and session list)
+last_updated: "2026-03-29T00:56:00Z"
+last_activity: "2026-03-29 - Completed 03-01 (Types, API client, SSE, query hooks, session list screen)"
 progress:
   total_phases: 7
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
-  percent: 57
+  total_plans: 7
+  completed_plans: 7
+  percent: 60
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-28)
 
 **Core value:** A Myrlin user can monitor, control, and interact with all their Claude Code sessions from their phone with the same capability as the desktop web interface, plus native mobile advantages.
-**Current focus:** Phase 2: Connection and Auth
+**Current focus:** Phase 3: Sessions and Workspaces
 
 ## Current Position
 
-Phase: 2 of 7 (Connection and Auth)
-Plan: 2 of 3 in current phase
+Phase: 3 of 7 (Sessions and Workspaces)
+Plan: 1 of 4 in current phase
 Status: In Progress
-Last activity: 2026-03-29 - Completed 02-02 (Auth screens: onboarding, QR scan, manual connect, login)
+Last activity: 2026-03-29 - Completed 03-01 (Types, API client, SSE, query hooks, session list screen)
 
-Progress: [█████░░░░░] 57%
+Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
@@ -54,6 +54,7 @@ Progress: [█████░░░░░] 57%
 | Phase 02-connection-and-auth P01 | 6m | 2 tasks | 8 files |
 | Phase 02 P02 | 5m | 4 tasks | 7 files |
 | Phase 02 P03 | 4m | 3 tasks | 7 files |
+| Phase 03 P01 | 6m | 2 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,10 @@ Recent decisions affecting current work:
 - 02-02: Hydration gate prevents flash-to-onboarding for returning users
 - 02-02: expo-camera CameraView with barcodeScannerSettings for QR scanning
 - 02-02: QR scan cooldown (1.5s) prevents multiple fires on same code
+- 03-01: QueryClientProvider added to root _layout.tsx (was missing, required for TanStack Query)
+- 03-01: SSE events invalidate TanStack Query cache only, never mutate state directly
+- 03-01: SessionCard uses Pressable directly (Card component lacks onLongPress)
+- 03-01: FlashList v2 without estimatedItemSize (auto-measures per research)
 
 ### Pending Todos
 
@@ -96,6 +101,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T00:31:24Z
-Stopped at: Completed 02-02-PLAN.md (Auth screens) and 02-03-PLAN.md (Connection features)
+Last session: 2026-03-29T00:56:00Z
+Stopped at: Completed 03-01-PLAN.md (Data foundation and session list)
 Resume file: None

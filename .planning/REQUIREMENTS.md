@@ -38,8 +38,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Sessions
 
-- [ ] **SESS-01**: User can view all sessions in a scrollable list with real-time status (SSE)
-- [ ] **SESS-02**: User can filter sessions by workspace using filter chips
+- [x] **SESS-01**: User can view all sessions in a scrollable list with real-time status (SSE)
+- [x] **SESS-02**: User can filter sessions by workspace using filter chips
 - [ ] **SESS-03**: User can search sessions by name or topic
 - [ ] **SESS-04**: User can view session detail (metadata, cost, logs, subagents, tags)
 - [ ] **SESS-05**: User can start, stop, and restart a session
@@ -51,10 +51,10 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **SESS-11**: User can view and use session templates for quick-launch
 - [ ] **SESS-12**: User can auto-title a session (AI-generated)
 - [ ] **SESS-13**: User can summarize a session (AI-generated)
-- [ ] **SESS-14**: User can view recently active sessions
+- [x] **SESS-14**: User can view recently active sessions
 - [ ] **SESS-15**: User can save a session as a template
-- [ ] **SESS-16**: Session cards show activity indicator (Reading, Writing, Running, etc.)
-- [ ] **SESS-17**: Session cards show needs-input badge when awaiting user response
+- [x] **SESS-16**: Session cards show activity indicator (Reading, Writing, Running, etc.)
+- [x] **SESS-17**: Session cards show needs-input badge when awaiting user response
 - [ ] **SESS-18**: User can bulk stop sessions via session manager
 
 ### Terminal
@@ -240,8 +240,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUTH-04 | Phase 2 | Complete |
 | SRVR-01 | Phase 2 | Complete |
 | SRVR-02 | Phase 2 | Complete |
-| SESS-01 | Phase 3 | Pending |
-| SESS-02 | Phase 3 | Pending |
+| SESS-01 | Phase 3 | Complete |
+| SESS-02 | Phase 3 | Complete |
 | SESS-03 | Phase 3 | Pending |
 | SESS-04 | Phase 3 | Pending |
 | SESS-05 | Phase 3 | Pending |
@@ -253,10 +253,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SESS-11 | Phase 3 | Pending |
 | SESS-12 | Phase 3 | Pending |
 | SESS-13 | Phase 3 | Pending |
-| SESS-14 | Phase 3 | Pending |
+| SESS-14 | Phase 3 | Complete |
 | SESS-15 | Phase 3 | Pending |
-| SESS-16 | Phase 3 | Pending |
-| SESS-17 | Phase 3 | Pending |
+| SESS-16 | Phase 3 | Complete |
+| SESS-17 | Phase 3 | Complete |
 | SESS-18 | Phase 3 | Pending |
 | WORK-01 | Phase 3 | Pending |
 | WORK-02 | Phase 3 | Pending |
