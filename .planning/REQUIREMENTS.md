@@ -1,347 +1,158 @@
-# Requirements: Myrlin Mobile
+# Requirements: Myrlin Server Mobile Support (v1.1)
 
-**Defined:** 2026-03-28
-**Core Value:** A Myrlin user can monitor, control, and interact with all their Claude Code sessions from their phone with the same capability as the desktop web interface.
+**Defined:** 2026-03-29
+**Core Value:** Self-hosted Myrlin server fully supports mobile clients with persistent auth, device management, push notifications, and optimized data sync, with zero external dependencies beyond Expo Push relay.
 
-## v1 Requirements
+## v1.1 Requirements
 
-Requirements for initial release. Each maps to roadmap phases.
+### Token Persistence
 
-### Foundation
+- [ ] **TOKN-01**: Paired device tokens persist across server restarts (stored in state file)
+- [ ] **TOKN-02**: Server reloads all valid device tokens into active set on startup
+- [ ] **TOKN-03**: Expired device tokens (> 90 days) are automatically cleaned up on startup
+- [ ] **TOKN-04**: Token validation uses timing-safe comparison (existing pattern)
+- [ ] **TOKN-05**: Token refresh endpoint allows mobile to get new token before expiration
+- [ ] **TOKN-06**: Refreshed tokens immediately replace old tokens in active set and state
 
-- [x] **FOUND-01**: App builds and runs on iOS via EAS Build development build
-- [x] **FOUND-02**: App builds and runs on Android via EAS Build development build
-- [x] **FOUND-03**: File-based navigation (expo-router) with typed routes for all screens
-- [x] **FOUND-04**: Catppuccin Mocha theme loads synchronously before first frame (MMKV)
-- [x] **FOUND-05**: All 13 themes render identically to web CSS custom properties
-- [x] **FOUND-06**: Custom fonts load (Plus Jakarta Sans, JetBrains Mono) before first render
-- [x] **FOUND-07**: Shared component library matches web design language (buttons, badges, cards, inputs, toggles, toasts)
-- [x] **FOUND-08**: Maestro test infrastructure runs on iOS Simulator with screenshot capture
+### Device Registry
 
-### Connection
+- [ ] **DEVC-01**: Server stores paired device metadata (deviceId, name, platform, appVersion, pairedAt, lastSeenAt, expiresAt)
+- [ ] **DEVC-02**: Device lastSeenAt updates on each authenticated API request (debounced)
+- [ ] **DEVC-03**: GET /api/devices returns list of all paired devices with online status
+- [ ] **DEVC-04**: DELETE /api/devices/:deviceId revokes device token and closes active connections
+- [ ] **DEVC-05**: PUT /api/devices/:deviceId updates device name and push preferences
+- [ ] **DEVC-06**: POST /api/devices/:deviceId/test-push sends test notification to device
 
-- [x] **CONN-01**: User can scan QR code from desktop Myrlin UI to pair their phone
-- [x] **CONN-02**: User can manually enter server URL and password to connect
-- [x] **CONN-03**: Auth token stored securely in expo-secure-store (encrypted)
-- [x] **CONN-04**: App reconnects automatically when connection drops and recovers
-- [x] **CONN-05**: User can connect to multiple servers (home PC, work, etc.)
-- [x] **CONN-06**: User can switch between connected servers
-- [x] **CONN-07**: Server connection status visible at all times (connected/disconnected indicator)
-- [x] **CONN-08**: Onboarding flow guides first-time user through pairing
+### Pairing Enhancement
 
-### Authentication
+- [ ] **PAIR-01**: POST /api/auth/pair returns deviceId and server capabilities in response
+- [ ] **PAIR-02**: Pair endpoint stores device metadata (name, platform, appVersion) in pairedDevices
+- [ ] **PAIR-03**: GET /api/auth/pairing-code detects LAN IP from network interfaces
+- [ ] **PAIR-04**: GET /api/auth/pairing-code detects Tailscale IP (100.x.x.x) if present
+- [ ] **PAIR-05**: GET /api/auth/pairing-code uses configured tunnel URL if available
+- [ ] **PAIR-06**: QR payload includes all available URLs so mobile can try each
+- [ ] **PAIR-07**: Server info endpoint (GET /api/server-info) returns capabilities, URLs, and stats without auth
 
-- [x] **AUTH-01**: User can log in with password on known server
-- [x] **AUTH-02**: Biometric app lock (Face ID / fingerprint) gates all screens
-- [x] **AUTH-03**: User can log out from any screen
-- [x] **AUTH-04**: Session token persists across app restarts (auto-login)
+### CORS and Network
 
-### Sessions
+- [ ] **CORS-01**: CORS allows requests from any origin when a valid Bearer token is present
+- [ ] **CORS-02**: CORS preflight (OPTIONS) responds correctly for mobile clients
+- [ ] **CORS-03**: Content-Security-Policy updated to allow mobile WebSocket connections from any host
 
-- [x] **SESS-01**: User can view all sessions in a scrollable list with real-time status (SSE)
-- [x] **SESS-02**: User can filter sessions by workspace using filter chips
-- [x] **SESS-03**: User can search sessions by name or topic
-- [x] **SESS-04**: User can view session detail (metadata, cost, logs, subagents, tags)
-- [x] **SESS-05**: User can start, stop, and restart a session
-- [x] **SESS-06**: User can create a new session (name, workspace, directory, command, model, template)
-- [x] **SESS-07**: User can rename a session
-- [x] **SESS-08**: User can delete (hide) a session
-- [x] **SESS-09**: User can move a session to a different workspace
-- [x] **SESS-10**: User can add and remove tags on a session
-- [x] **SESS-11**: User can view and use session templates for quick-launch
-- [x] **SESS-12**: User can auto-title a session (AI-generated)
-- [x] **SESS-13**: User can summarize a session (AI-generated)
-- [x] **SESS-14**: User can view recently active sessions
-- [x] **SESS-15**: User can save a session as a template
-- [x] **SESS-16**: Session cards show activity indicator (Reading, Writing, Running, etc.)
-- [x] **SESS-17**: Session cards show needs-input badge when awaiting user response
-- [x] **SESS-18**: User can bulk stop sessions via session manager
+### Push Notifications
 
-### Terminal
+- [ ] **PUSH-01**: Push dispatch retries failed sends with exponential backoff (max 3 attempts)
+- [ ] **PUSH-02**: Push events are batched in a 2-second window (5 events in 1s = 1 summary push)
+- [ ] **PUSH-03**: Per-device push preferences (sessionComplete, needsInput, conflicts, taskReview) stored in device record
+- [ ] **PUSH-04**: Push dispatch checks device preferences before sending
+- [ ] **PUSH-05**: Push payloads include deep link route data for mobile navigation
+- [ ] **PUSH-06**: Push includes badge count (running sessions) for iOS
+- [ ] **PUSH-07**: Stale push tokens (DeviceNotRegistered) are automatically cleaned from device registry
+- [ ] **PUSH-08**: GET /api/push/preferences returns device's notification preferences
+- [ ] **PUSH-09**: PUT /api/push/preferences updates device's notification preferences
+- [ ] **PUSH-10**: Push dispatched for: session complete, needs input, file conflicts, task ready for review
 
-- [x] **TERM-01**: User can view terminal output in real-time (WebView + xterm.js)
-- [x] **TERM-02**: User can type commands via native TextInput with iOS keyboard
-- [x] **TERM-03**: User can copy selected terminal text to clipboard
-- [x] **TERM-04**: User can paste from clipboard into terminal
-- [x] **TERM-05**: User can share terminal text via native share sheet
-- [x] **TERM-06**: User can upload image from camera or gallery to session
-- [x] **TERM-07**: User can use voice input (dictation) to type commands
-- [x] **TERM-08**: Terminal applies correct theme colors matching current app theme
-- [x] **TERM-09**: Terminal reader mode (full-screen scrollable text view)
-- [x] **TERM-10**: User can swipe between open terminal sessions (carousel)
-- [x] **TERM-11**: Activity indicator visible in terminal header
-- [x] **TERM-12**: Keyboard avoidance works correctly (input stays above keyboard)
+### SSE Enhancement
 
-### Workspaces
+- [ ] **SSE-01**: SSE sends heartbeat comment (`: heartbeat`) every 30 seconds
+- [ ] **SSE-02**: SSE client registry tracks device metadata (deviceId, subscriptions)
+- [ ] **SSE-03**: SSE supports deviceId query param for device-specific filtering
+- [ ] **SSE-04**: SSE filters workspace-scoped events by device's workspace subscriptions
+- [ ] **SSE-05**: Global events (settings, server status) always sent regardless of subscriptions
+- [ ] **SSE-06**: Dead SSE connections cleaned up within 60 seconds
 
-- [x] **WORK-01**: User can view all workspaces with session counts
-- [x] **WORK-02**: User can create a new workspace (name, description, color)
-- [x] **WORK-03**: User can rename a workspace
-- [x] **WORK-04**: User can delete a workspace
-- [x] **WORK-05**: User can reorder workspaces via drag-and-drop
-- [x] **WORK-06**: User can view workspace groups (collapsible)
-- [x] **WORK-07**: User can assign workspace colors
+### Workspace Subscriptions
 
-### Tasks
+- [ ] **WSUB-01**: POST /api/devices/:deviceId/subscriptions sets workspace subscription list
+- [ ] **WSUB-02**: GET /api/devices/:deviceId/subscriptions returns current subscriptions
+- [ ] **WSUB-03**: Subscriptions stored in device record in pairedDevices
+- [ ] **WSUB-04**: Empty subscription list means "receive all events" (default)
 
-- [x] **TASK-01**: User can view worktree tasks in kanban board (5 columns)
-- [x] **TASK-02**: User can drag task cards between columns to change status
-- [x] **TASK-03**: User can view task in list mode (alternative to board)
-- [x] **TASK-04**: User can create a new worktree task
-- [x] **TASK-05**: User can view task detail (branch, files, commits, PR, timeline)
-- [x] **TASK-06**: User can set task blockers (dependency)
-- [x] **TASK-07**: User can assign model to a task
-- [x] **TASK-08**: User can add/edit tags on tasks
-- [x] **TASK-09**: User can create a GitHub PR from task
-- [x] **TASK-10**: User can view PR status on task card
-- [x] **TASK-11**: User can merge or reject a task branch
-- [x] **TASK-12**: User can extract tasks from session via AI spinoff
+### Initial Sync
 
-### Cost
+- [ ] **SYNC-01**: GET /api/mobile/sync returns all bootstrap data in single response
+- [ ] **SYNC-02**: Sync response includes workspaces, sessions (sparse), groups, templates, settings, stats, device info
+- [ ] **SYNC-03**: Sessions in sync response use sparse fields (id, name, status, workspaceId, topic, tags, lastActive, pid)
+- [ ] **SYNC-04**: Sync response includes syncVersion number for future delta sync
 
-- [x] **COST-01**: User can view total cost across all sessions
-- [x] **COST-02**: User can view cost by time period (today, 7d, 30d, all)
-- [x] **COST-03**: User can view cost breakdown by model
-- [x] **COST-04**: User can view cost breakdown by workspace
-- [x] **COST-05**: User can view cost timeline chart (daily trend)
-- [x] **COST-06**: User can view top sessions ranked by cost
-- [x] **COST-07**: User can view per-session cost with token bar visualization
-- [x] **COST-08**: User can view cache savings display
+### Session Pagination
 
-### Docs
+- [ ] **PAGE-01**: GET /api/sessions supports limit and offset query parameters
+- [ ] **PAGE-02**: GET /api/sessions supports status filter (running, stopped, error, idle, all)
+- [ ] **PAGE-03**: GET /api/sessions supports sort (lastActive, name, created) and order (asc, desc)
+- [ ] **PAGE-04**: GET /api/sessions supports search query param (substring match on name/topic)
+- [ ] **PAGE-05**: GET /api/sessions supports workspaceId filter
+- [ ] **PAGE-06**: Paginated response includes total count, hasMore flag
+- [ ] **PAGE-07**: Default limit is 50, max 100, for backward compatibility unpaginated requests still work
 
-- [x] **DOCS-01**: User can view workspace docs (notes, goals, tasks, roadmap, rules)
-- [x] **DOCS-02**: User can add items to any doc section
-- [x] **DOCS-03**: User can edit doc items
-- [x] **DOCS-04**: User can delete doc items (swipe-to-delete)
-- [x] **DOCS-05**: User can toggle goal/task completion (checkbox)
-- [x] **DOCS-06**: User can view feature board (kanban: backlog, active, done)
-- [x] **DOCS-07**: User can create and manage features on the board
-- [x] **DOCS-08**: User can drag features between board columns
+### Desktop Web UI
 
-### Notifications
+- [ ] **DWUI-01**: "Pair Mobile" button visible in header bar
+- [ ] **DWUI-02**: Pair Mobile modal shows QR code generated from /api/auth/pairing-code
+- [ ] **DWUI-03**: QR code auto-refreshes every 4 minutes (tokens expire at 5)
+- [ ] **DWUI-04**: Modal shows all detected connection URLs (LAN, Tailscale, tunnel)
+- [ ] **DWUI-05**: Modal shows paired devices list with name, platform, last seen, push status
+- [ ] **DWUI-06**: Each paired device has a "Revoke" button with confirmation
+- [ ] **DWUI-07**: Each paired device has a "Test Push" button
+- [ ] **DWUI-08**: QR code rendered as SVG using qrcode library
 
-- [x] **NOTF-01**: User receives push notification when a session completes
-- [x] **NOTF-02**: User receives push notification when a session needs input
-- [x] **NOTF-03**: User receives push notification for file conflicts
-- [x] **NOTF-04**: User receives push notification when a task is ready for review
-- [x] **NOTF-05**: Tapping a push notification opens the relevant screen (deep link)
-- [x] **NOTF-06**: In-app toast notifications for actions (create, update, delete, errors)
+### Scrollback and Logs
 
-### Resources
+- [ ] **SCRL-01**: GET /api/sessions/:id/scrollback returns paginated terminal scrollback
+- [ ] **SCRL-02**: Scrollback supports lines and from parameters (from=end for last N lines)
+- [ ] **SCRL-03**: GET /api/sessions/:id/logs supports limit and offset pagination
 
-- [x] **RSRC-01**: User can view system CPU and memory usage
-- [x] **RSRC-02**: User can view per-session CPU and memory
-- [x] **RSRC-03**: User can kill a process from the resources screen
+### Error Standards
 
-### Search
-
-- [x] **SRCH-01**: User can search sessions by name, topic, or content (keyword)
-- [x] **SRCH-02**: User can search conversations with AI-powered semantic search
-- [x] **SRCH-03**: Quick switcher modal accessible from sessions tab
-
-### Conflicts
-
-- [x] **CNFL-01**: User can view file conflicts across sessions
-- [x] **CNFL-02**: Conflict badge shows count in More tab
-
-### Settings
-
-- [x] **SETT-01**: User can configure all settings matching web GUI (20+)
-- [x] **SETT-02**: User can pick theme from all 13 options with live preview
-- [x] **SETT-03**: User can manage connected servers (add, remove, rename)
-- [x] **SETT-04**: User can configure push notification preferences
-- [x] **SETT-05**: User can check for app updates
-
-### Platform Integration
-
-- [x] **PLAT-01**: Haptic feedback on all interactive elements
-- [x] **PLAT-02**: Native share sheet integration
-- [x] **PLAT-03**: Deep links (myrlin://session/xyz)
-- [x] **PLAT-04**: Offline graceful degradation (cached state visible, reconnection queue)
-- [x] **PLAT-05**: Pull-to-refresh on all list screens
-
-### Server Additions
-
-- [x] **SRVR-01**: Server exposes GET /api/auth/pairing-code for QR generation
-- [x] **SRVR-02**: Server exposes POST /api/auth/pair for mobile token exchange
-- [x] **SRVR-03**: Server exposes POST /api/push/register for device token storage
-- [x] **SRVR-04**: Server exposes POST /api/push/unregister for device removal
-- [x] **SRVR-05**: Server sends push via Expo Push API on session events
+- [ ] **ERRR-01**: Mobile-facing endpoints return structured errors with machine-readable code
+- [ ] **ERRR-02**: Rate limit responses include Retry-After header
+- [ ] **ERRR-03**: All responses include X-API-Version header (value: 1)
 
 ### Testing
 
-- [x] **TEST-01**: Maestro flow tests exist for every screen
-- [x] **TEST-02**: Storybook stories exist for every shared component
-- [x] **TEST-03**: Screenshot comparison validates theme consistency
-- [x] **TEST-04**: Integration tests validate API client against real server
+- [ ] **MTST-01**: Integration tests for token persistence across simulated restart
+- [ ] **MTST-02**: Integration tests for device CRUD (pair, list, update, revoke)
+- [ ] **MTST-03**: Integration tests for push retry, batching, and preference filtering
+- [ ] **MTST-04**: Integration tests for SSE heartbeat and workspace filtering
+- [ ] **MTST-05**: Integration tests for session pagination with various filters
+- [ ] **MTST-06**: Integration tests for initial sync endpoint response shape
 
-## v2 Requirements
+## Future Requirements (v1.2+)
 
-Deferred to future release. Tracked but not in current roadmap.
+### Delta Sync
+- **DSYN-01**: GET /api/mobile/delta returns only changes since a given timestamp
+- **DSYN-02**: Server maintains circular buffer of last 1000 state changes
 
-### Relay Service
+### Offline Bundle
+- **OFFL-01**: GET /api/mobile/offline-bundle returns compressed state snapshot
+- **OFFL-02**: POST /api/mobile/offline-sync uploads queued mutations for merge
 
-- **RLAY-01**: myrlin.io account system (signup, login, OAuth)
-- **RLAY-02**: myrlin.io WebSocket relay for traffic proxying
-- **RLAY-03**: Server registration with myrlin.io
-- **RLAY-04**: Billing integration (Stripe)
-
-### Platform Extensions
-
-- **PEXT-01**: Apple Watch companion (session status on wrist)
-- **PEXT-02**: iOS Widgets (session count, cost summary)
-- **PEXT-03**: Live Activities (active session progress)
-- **PEXT-04**: Custom notification sounds per event type
-
-### Collaboration
-
-- **COLB-01**: Multi-user team sync (shared workspaces)
-- **COLB-02**: Real-time collaborative session viewing
+### Connection Quality
+- **CQAL-01**: POST /api/devices/:deviceId/connection-quality reports network conditions
+- **CQAL-02**: Server adjusts SSE event frequency based on reported quality
 
 ## Out of Scope
 
-Explicitly excluded. Documented to prevent scope creep.
-
 | Feature | Reason |
 |---------|--------|
-| Local terminal (run Claude on phone) | Impossible; Claude Code requires server-side execution |
-| In-app code editor | Scope creep; this is a session manager, not an IDE |
-| Desktop (Electron) app | Mobile-only scope; desktop already has web GUI |
-| Multi-user team sync | Requires coordination server; deferred to paid tier |
-| Offline terminal operation | Terminal requires active server connection |
-| myrlin.io relay (v1) | Requires separate backend infrastructure; Phase 2+ |
+| myrlin.io relay service | Separate infrastructure, paid tier scope |
+| Multi-user auth (per-user tokens) | v2 feature, requires identity system |
+| End-to-end encryption | Adds complexity, LAN/Tailscale already encrypted in transit |
+| Custom push notification sounds | Low value, use system defaults |
+| Advanced per-device rate limiting | Basic IP rate limiting sufficient for v1.1 |
+| Certificate pinning | Overkill for self-hosted LAN/Tailscale use case |
 
 ## Traceability
 
-Which phases cover which requirements. Updated during roadmap creation.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Complete |
-| FOUND-02 | Phase 1 | Complete |
-| FOUND-03 | Phase 1 | Complete |
-| FOUND-04 | Phase 1 | Complete |
-| FOUND-05 | Phase 1 | Complete |
-| FOUND-06 | Phase 1 | Complete |
-| FOUND-07 | Phase 1 | Complete |
-| FOUND-08 | Phase 1 | Complete |
-| CONN-01 | Phase 2 | Complete |
-| CONN-02 | Phase 2 | Complete |
-| CONN-03 | Phase 2 | Complete |
-| CONN-04 | Phase 2 | Complete |
-| CONN-05 | Phase 2 | Complete |
-| CONN-06 | Phase 2 | Complete |
-| CONN-07 | Phase 2 | Complete |
-| CONN-08 | Phase 2 | Complete |
-| AUTH-01 | Phase 2 | Complete |
-| AUTH-02 | Phase 2 | Complete |
-| AUTH-03 | Phase 2 | Complete |
-| AUTH-04 | Phase 2 | Complete |
-| SRVR-01 | Phase 2 | Complete |
-| SRVR-02 | Phase 2 | Complete |
-| SESS-01 | Phase 3 | Complete |
-| SESS-02 | Phase 3 | Complete |
-| SESS-03 | Phase 3 | Complete |
-| SESS-04 | Phase 3 | Complete |
-| SESS-05 | Phase 3 | Complete |
-| SESS-06 | Phase 3 | Complete |
-| SESS-07 | Phase 3 | Complete |
-| SESS-08 | Phase 3 | Complete |
-| SESS-09 | Phase 3 | Complete |
-| SESS-10 | Phase 3 | Complete |
-| SESS-11 | Phase 3 | Complete |
-| SESS-12 | Phase 3 | Complete |
-| SESS-13 | Phase 3 | Complete |
-| SESS-14 | Phase 3 | Complete |
-| SESS-15 | Phase 3 | Complete |
-| SESS-16 | Phase 3 | Complete |
-| SESS-17 | Phase 3 | Complete |
-| SESS-18 | Phase 3 | Complete |
-| WORK-01 | Phase 3 | Complete |
-| WORK-02 | Phase 3 | Complete |
-| WORK-03 | Phase 3 | Complete |
-| WORK-04 | Phase 3 | Complete |
-| WORK-05 | Phase 3 | Complete |
-| WORK-06 | Phase 3 | Complete |
-| WORK-07 | Phase 3 | Complete |
-| SRCH-01 | Phase 3 | Complete |
-| SRCH-02 | Phase 3 | Complete |
-| SRCH-03 | Phase 3 | Complete |
-| CNFL-01 | Phase 3 | Complete |
-| CNFL-02 | Phase 3 | Complete |
-| TERM-01 | Phase 4 | Complete |
-| TERM-02 | Phase 4 | Complete |
-| TERM-03 | Phase 4 | Complete |
-| TERM-04 | Phase 4 | Complete |
-| TERM-05 | Phase 4 | Complete |
-| TERM-06 | Phase 4 | Complete |
-| TERM-07 | Phase 4 | Complete |
-| TERM-08 | Phase 4 | Complete |
-| TERM-09 | Phase 4 | Complete |
-| TERM-10 | Phase 4 | Complete |
-| TERM-11 | Phase 4 | Complete |
-| TERM-12 | Phase 4 | Complete |
-| COST-01 | Phase 5 | Complete |
-| COST-02 | Phase 5 | Complete |
-| COST-03 | Phase 5 | Complete |
-| COST-04 | Phase 5 | Complete |
-| COST-05 | Phase 5 | Complete |
-| COST-06 | Phase 5 | Complete |
-| COST-07 | Phase 5 | Complete |
-| COST-08 | Phase 5 | Complete |
-| DOCS-01 | Phase 5 | Complete |
-| DOCS-02 | Phase 5 | Complete |
-| DOCS-03 | Phase 5 | Complete |
-| DOCS-04 | Phase 5 | Complete |
-| DOCS-05 | Phase 5 | Complete |
-| DOCS-06 | Phase 5 | Complete |
-| DOCS-07 | Phase 5 | Complete |
-| DOCS-08 | Phase 5 | Complete |
-| TASK-01 | Phase 5 | Complete |
-| TASK-02 | Phase 5 | Complete |
-| TASK-03 | Phase 5 | Complete |
-| TASK-04 | Phase 5 | Complete |
-| TASK-05 | Phase 5 | Complete |
-| TASK-06 | Phase 5 | Complete |
-| TASK-07 | Phase 5 | Complete |
-| TASK-08 | Phase 5 | Complete |
-| TASK-09 | Phase 5 | Complete |
-| TASK-10 | Phase 5 | Complete |
-| TASK-11 | Phase 5 | Complete |
-| TASK-12 | Phase 5 | Complete |
-| RSRC-01 | Phase 5 | Complete |
-| RSRC-02 | Phase 5 | Complete |
-| RSRC-03 | Phase 5 | Complete |
-| NOTF-01 | Phase 6 | Complete |
-| NOTF-02 | Phase 6 | Complete |
-| NOTF-03 | Phase 6 | Complete |
-| NOTF-04 | Phase 6 | Complete |
-| NOTF-05 | Phase 6 | Complete |
-| NOTF-06 | Phase 6 | Complete |
-| SRVR-03 | Phase 6 | Complete |
-| SRVR-04 | Phase 6 | Complete |
-| SRVR-05 | Phase 6 | Complete |
-| SETT-01 | Phase 6 | Complete |
-| SETT-02 | Phase 6 | Complete |
-| SETT-03 | Phase 6 | Complete |
-| SETT-04 | Phase 6 | Complete |
-| SETT-05 | Phase 6 | Complete |
-| PLAT-01 | Phase 7 | Complete |
-| PLAT-02 | Phase 7 | Complete |
-| PLAT-03 | Phase 7 | Complete |
-| PLAT-04 | Phase 7 | Complete |
-| PLAT-05 | Phase 7 | Complete |
-| TEST-01 | Phase 7 | Complete |
-| TEST-02 | Phase 7 | Complete |
-| TEST-03 | Phase 7 | Complete |
-| TEST-04 | Phase 7 | Complete |
+| (Populated by roadmapper) | | |
 
 **Coverage:**
-- v1 requirements: 118 total (17 categories)
-- Mapped to phases: 118/118
-- Unmapped: 0
+- v1.1 requirements: 67 total (14 categories)
+- Mapped to phases: 0 (awaiting roadmap)
+- Unmapped: 67
 
 ---
-*Requirements defined: 2026-03-28*
-*Last updated: 2026-03-28 after roadmap creation*
+*Requirements defined: 2026-03-29*
+*Last updated: 2026-03-29 after initial definition*
