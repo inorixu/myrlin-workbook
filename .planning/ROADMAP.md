@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Sessions and Workspaces** - Session list with SSE, session CRUD, workspace management, search, conflicts (completed 2026-03-29)
 - [x] **Phase 4: Terminal** - Hybrid WebView + xterm.js terminal, native input, clipboard, share, voice, camera, reader mode (completed 2026-03-29)
 - [x] **Phase 5: Data Screens** - Cost dashboard, workspace docs, task kanban board, resource monitor (completed 2026-03-29)
-- [ ] **Phase 6: Notifications and Settings** - Push notifications, server push endpoints, settings screen, notification preferences
+- [x] **Phase 6: Notifications and Settings** - Push notifications, server push endpoints, settings screen, notification preferences (completed 2026-03-29)
 - [ ] **Phase 7: Platform Polish and Testing** - Haptics, deep links, offline mode, pull-to-refresh, Maestro flows, Storybook, screenshot tests
 
 ## Phase Details
@@ -153,5 +153,5 @@ Note: Phases 4, 5, and 6 all depend on Phase 3 but not on each other. They can b
 | 3. Sessions and Workspaces | 4/4 | Complete   | 2026-03-29 |
 | 4. Terminal | 3/3 | Complete   | 2026-03-29 |
 | 5. Data Screens | 4/4 | Complete   | 2026-03-29 |
-| 6. Notifications and Settings | 1/3 | In Progress|  |
+| 6. Notifications and Settings | 3/3 | Complete   | 2026-03-29 |
 | 7. Platform Polish and Testing | 0/3 | Not started | - |

@@ -121,12 +121,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Notifications
 
-- [ ] **NOTF-01**: User receives push notification when a session completes
-- [ ] **NOTF-02**: User receives push notification when a session needs input
-- [ ] **NOTF-03**: User receives push notification for file conflicts
-- [ ] **NOTF-04**: User receives push notification when a task is ready for review
-- [ ] **NOTF-05**: Tapping a push notification opens the relevant screen (deep link)
-- [ ] **NOTF-06**: In-app toast notifications for actions (create, update, delete, errors)
+- [x] **NOTF-01**: User receives push notification when a session completes
+- [x] **NOTF-02**: User receives push notification when a session needs input
+- [x] **NOTF-03**: User receives push notification for file conflicts
+- [x] **NOTF-04**: User receives push notification when a task is ready for review
+- [x] **NOTF-05**: Tapping a push notification opens the relevant screen (deep link)
+- [x] **NOTF-06**: In-app toast notifications for actions (create, update, delete, errors)
 
 ### Resources
 
@@ -313,12 +313,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSRC-01 | Phase 5 | Complete |
 | RSRC-02 | Phase 5 | Complete |
 | RSRC-03 | Phase 5 | Complete |
-| NOTF-01 | Phase 6 | Pending |
-| NOTF-02 | Phase 6 | Pending |
-| NOTF-03 | Phase 6 | Pending |
-| NOTF-04 | Phase 6 | Pending |
-| NOTF-05 | Phase 6 | Pending |
-| NOTF-06 | Phase 6 | Pending |
+| NOTF-01 | Phase 6 | Complete |
+| NOTF-02 | Phase 6 | Complete |
+| NOTF-03 | Phase 6 | Complete |
+| NOTF-04 | Phase 6 | Complete |
+| NOTF-05 | Phase 6 | Complete |
+| NOTF-06 | Phase 6 | Complete |
 | SRVR-03 | Phase 6 | Complete |
 | SRVR-04 | Phase 6 | Complete |
 | SRVR-05 | Phase 6 | Complete |
