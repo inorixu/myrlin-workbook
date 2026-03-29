@@ -70,10 +70,10 @@
 
 ### Initial Sync
 
-- [ ] **SYNC-01**: GET /api/mobile/sync returns all bootstrap data in single response
-- [ ] **SYNC-02**: Sync response includes workspaces, sessions (sparse), groups, templates, settings, stats, device info
-- [ ] **SYNC-03**: Sessions in sync response use sparse fields (id, name, status, workspaceId, topic, tags, lastActive, pid)
-- [ ] **SYNC-04**: Sync response includes syncVersion number for future delta sync
+- [x] **SYNC-01**: GET /api/mobile/sync returns all bootstrap data in single response
+- [x] **SYNC-02**: Sync response includes workspaces, sessions (sparse), groups, templates, settings, stats, device info
+- [x] **SYNC-03**: Sessions in sync response use sparse fields (id, name, status, workspaceId, topic, tags, lastActive, pid)
+- [x] **SYNC-04**: Sync response includes syncVersion number for future delta sync
 
 ### Session Pagination
 
@@ -113,9 +113,9 @@
 - [x] **MTST-01**: Integration tests for token persistence across simulated restart
 - [x] **MTST-02**: Integration tests for device CRUD (pair, list, update, revoke)
 - [x] **MTST-03**: Integration tests for push retry, batching, and preference filtering
-- [ ] **MTST-04**: Integration tests for SSE heartbeat and workspace filtering
+- [x] **MTST-04**: Integration tests for SSE heartbeat and workspace filtering
 - [x] **MTST-05**: Integration tests for session pagination with various filters
-- [ ] **MTST-06**: Integration tests for initial sync endpoint response shape
+- [x] **MTST-06**: Integration tests for initial sync endpoint response shape
 
 ## Future Requirements (v1.2+)
 
@@ -188,10 +188,10 @@
 | WSUB-02 | Phase 11 | Complete |
 | WSUB-03 | Phase 11 | Complete |
 | WSUB-04 | Phase 11 | Complete |
-| SYNC-01 | Phase 11 | Pending |
-| SYNC-02 | Phase 11 | Pending |
-| SYNC-03 | Phase 11 | Pending |
-| SYNC-04 | Phase 11 | Pending |
+| SYNC-01 | Phase 11 | Complete |
+| SYNC-02 | Phase 11 | Complete |
+| SYNC-03 | Phase 11 | Complete |
+| SYNC-04 | Phase 11 | Complete |
 | PAGE-01 | Phase 12 | Complete |
 | PAGE-02 | Phase 12 | Complete |
 | PAGE-03 | Phase 12 | Complete |
@@ -216,9 +216,9 @@
 | MTST-01 | Phase 8 | Complete |
 | MTST-02 | Phase 8 | Complete |
 | MTST-03 | Phase 10 | Complete |
-| MTST-04 | Phase 11 | Pending |
+| MTST-04 | Phase 11 | Complete |
 | MTST-05 | Phase 12 | Complete |
-| MTST-06 | Phase 11 | Pending |
+| MTST-06 | Phase 11 | Complete |
 
 **Coverage:**
 - v1.1 requirements: 73 total (13 categories)
