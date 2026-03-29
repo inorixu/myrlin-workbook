@@ -1,17 +1,17 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: Mobile App
-status: executing
-stopped_at: Completed 11-03-PLAN.md
-last_updated: "2026-03-29T08:52:00.000Z"
-last_activity: 2026-03-29 - Completed Plan 11-03 (mobile sync endpoint and SSE integration tests)
+milestone: v1.1
+milestone_name: Server Mobile Support
+status: completed
+stopped_at: Completed 13-01-PLAN.md
+last_updated: "2026-03-29T08:58:30Z"
+last_activity: 2026-03-29 - Completed Plan 13-01 (structured errors, Retry-After, X-API-Version)
 progress:
   total_phases: 13
-  completed_phases: 11
-  total_plans: 37
-  completed_plans: 37
-  percent: 78
+  completed_phases: 13
+  total_plans: 38
+  completed_plans: 38
+  percent: 100
 ---
 
 # Project State
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-29)
 
 **Core value:** Self-hosted Myrlin server fully supports mobile clients with persistent auth, device management, push notifications, and optimized data sync.
-**Current focus:** Phase 11: SSE and Sync Optimization
+**Current focus:** All phases complete. v1.1 Server Mobile Support done.
 
 ## Current Position
 
-Phase: 11 of 13 (SSE and Sync Optimization)
-Plan: 3 of 3 in current phase (COMPLETE)
-Status: Phase Complete
-Last activity: 2026-03-29 - Completed Plan 11-03 (mobile sync endpoint and SSE integration tests)
+Phase: 13 of 13 (Error Standards and Hardening)
+Plan: 1 of 1 in current phase (COMPLETE)
+Status: Milestone Complete
+Last activity: 2026-03-29 - Completed Plan 13-01 (structured errors, Retry-After, X-API-Version)
 
-Progress: [████████░░] 78% (29/37 plans)
+Progress: [██████████] 100% (38/38 plans)
 
 ## Performance Metrics
 
@@ -57,6 +57,7 @@ Progress: [████████░░] 78% (29/37 plans)
 | 11    | 03   | 5min     | 2     | 2     |
 | Phase 10 P03 | 3min | 1 tasks | 1 files |
 | Phase 12 P03 | 2min | 1 tasks | 1 files |
+| 13    | 01   | 3min     | 1     | 2     |
 
 ## Accumulated Context
 
@@ -96,6 +97,9 @@ Progress: [████████░░] 78% (29/37 plans)
 - [Phase 11]: SSE integration tests spawn real server on port 3463 (matching pairing test pattern)
 - [Phase 10]: setTimeout mocked to fire immediately for retry tests; batching tests flush manually with 50ms settle
 - [Phase 12]: Direct store method testing for pagination (no HTTP server) for speed and isolation
+- [Phase 13]: Error codes use uppercase snake_case (RATE_LIMITED, UNAUTHORIZED, INVALID_PASSWORD)
+- [Phase 13]: isRateLimited() returns { limited, retryAfter } object for Retry-After header calculation
+- [Phase 13]: structuredError helper exported from server.js for reuse by other route modules
 
 ### Pending Todos
 
@@ -107,6 +111,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T08:52:00.000Z
-Stopped at: Completed 11-03-PLAN.md
+Last session: 2026-03-29T08:58:30Z
+Stopped at: Completed 13-01-PLAN.md - v1.1 milestone complete
 Resume file: None
