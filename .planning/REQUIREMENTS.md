@@ -112,7 +112,7 @@
 
 - [x] **MTST-01**: Integration tests for token persistence across simulated restart
 - [x] **MTST-02**: Integration tests for device CRUD (pair, list, update, revoke)
-- [ ] **MTST-03**: Integration tests for push retry, batching, and preference filtering
+- [x] **MTST-03**: Integration tests for push retry, batching, and preference filtering
 - [ ] **MTST-04**: Integration tests for SSE heartbeat and workspace filtering
 - [ ] **MTST-05**: Integration tests for session pagination with various filters
 - [ ] **MTST-06**: Integration tests for initial sync endpoint response shape
@@ -215,7 +215,7 @@
 | ERRR-03 | Phase 13 | Pending |
 | MTST-01 | Phase 8 | Complete |
 | MTST-02 | Phase 8 | Complete |
-| MTST-03 | Phase 10 | Pending |
+| MTST-03 | Phase 10 | Complete |
 | MTST-04 | Phase 11 | Pending |
 | MTST-05 | Phase 12 | Pending |
 | MTST-06 | Phase 11 | Pending |

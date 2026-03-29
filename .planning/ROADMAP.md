@@ -34,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 8: Token Persistence and Device Registry** - Persistent auth tokens, device metadata storage, device CRUD API, CORS for mobile origins
 - [ ] **Phase 9: Pairing Enhancement and Desktop UI** - Enhanced pairing with URL auto-detection, QR code modal, paired device management in web UI
-- [ ] **Phase 10: Push Enhancement** - Retry with backoff, batching, per-device preferences, rich payloads with deep links, stale token cleanup
+- [x] **Phase 10: Push Enhancement** - Retry with backoff, batching, per-device preferences, rich payloads with deep links, stale token cleanup (completed 2026-03-29)
 - [ ] **Phase 11: SSE and Sync Optimization** - SSE heartbeat, device-aware filtering, workspace subscriptions, initial sync endpoint
 - [ ] **Phase 12: API Enhancement** - Session pagination, scrollback pagination, log pagination, token refresh
 - [ ] **Phase 13: Error Standards and Hardening** - Structured error codes, rate limit headers, API versioning
@@ -280,7 +280,7 @@ Phase 8 is the critical foundation. After Phase 8:
 | 7. Platform Polish and Testing | v1.0 | 3/3 | Complete | - |
 | 8. Token Persistence and Device Registry | 1/3 | In Progress|  | - |
 | 9. Pairing Enhancement and Desktop UI | v1.1 | 0/2 | Not started | - |
-| 10. Push Enhancement | 2/3 | In Progress|  | - |
+| 10. Push Enhancement | 3/3 | Complete   | 2026-03-29 | - |
 | 11. SSE and Sync Optimization | 2/3 | In Progress|  | - |
 | 12. API Enhancement | 2/3 | In Progress|  | - |
 | 13. Error Standards and Hardening | v1.1 | 0/1 | Not started | - |
