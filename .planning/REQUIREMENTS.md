@@ -130,9 +130,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Resources
 
-- [ ] **RSRC-01**: User can view system CPU and memory usage
-- [ ] **RSRC-02**: User can view per-session CPU and memory
-- [ ] **RSRC-03**: User can kill a process from the resources screen
+- [x] **RSRC-01**: User can view system CPU and memory usage
+- [x] **RSRC-02**: User can view per-session CPU and memory
+- [x] **RSRC-03**: User can kill a process from the resources screen
 
 ### Search
 
@@ -310,9 +310,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TASK-10 | Phase 5 | Pending |
 | TASK-11 | Phase 5 | Pending |
 | TASK-12 | Phase 5 | Pending |
-| RSRC-01 | Phase 5 | Pending |
-| RSRC-02 | Phase 5 | Pending |
-| RSRC-03 | Phase 5 | Pending |
+| RSRC-01 | Phase 5 | Complete |
+| RSRC-02 | Phase 5 | Complete |
+| RSRC-03 | Phase 5 | Complete |
 | NOTF-01 | Phase 6 | Pending |
 | NOTF-02 | Phase 6 | Pending |
 | NOTF-03 | Phase 6 | Pending |
