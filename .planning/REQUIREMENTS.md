@@ -41,13 +41,13 @@
 
 ### Push Notifications
 
-- [ ] **PUSH-01**: Push dispatch retries failed sends with exponential backoff (max 3 attempts)
-- [ ] **PUSH-02**: Push events are batched in a 2-second window (5 events in 1s = 1 summary push)
+- [x] **PUSH-01**: Push dispatch retries failed sends with exponential backoff (max 3 attempts)
+- [x] **PUSH-02**: Push events are batched in a 2-second window (5 events in 1s = 1 summary push)
 - [ ] **PUSH-03**: Per-device push preferences (sessionComplete, needsInput, conflicts, taskReview) stored in device record
 - [ ] **PUSH-04**: Push dispatch checks device preferences before sending
-- [ ] **PUSH-05**: Push payloads include deep link route data for mobile navigation
-- [ ] **PUSH-06**: Push includes badge count (running sessions) for iOS
-- [ ] **PUSH-07**: Stale push tokens (DeviceNotRegistered) are automatically cleaned from device registry
+- [x] **PUSH-05**: Push payloads include deep link route data for mobile navigation
+- [x] **PUSH-06**: Push includes badge count (running sessions) for iOS
+- [x] **PUSH-07**: Stale push tokens (DeviceNotRegistered) are automatically cleaned from device registry
 - [ ] **PUSH-08**: GET /api/push/preferences returns device's notification preferences
 - [ ] **PUSH-09**: PUT /api/push/preferences updates device's notification preferences
 - [ ] **PUSH-10**: Push dispatched for: session complete, needs input, file conflicts, task ready for review
@@ -168,13 +168,13 @@
 | CORS-01 | Phase 8 | Complete |
 | CORS-02 | Phase 8 | Complete |
 | CORS-03 | Phase 8 | Complete |
-| PUSH-01 | Phase 10 | Pending |
-| PUSH-02 | Phase 10 | Pending |
+| PUSH-01 | Phase 10 | Complete |
+| PUSH-02 | Phase 10 | Complete |
 | PUSH-03 | Phase 10 | Pending |
 | PUSH-04 | Phase 10 | Pending |
-| PUSH-05 | Phase 10 | Pending |
-| PUSH-06 | Phase 10 | Pending |
-| PUSH-07 | Phase 10 | Pending |
+| PUSH-05 | Phase 10 | Complete |
+| PUSH-06 | Phase 10 | Complete |
+| PUSH-07 | Phase 10 | Complete |
 | PUSH-08 | Phase 10 | Pending |
 | PUSH-09 | Phase 10 | Pending |
 | PUSH-10 | Phase 10 | Pending |
