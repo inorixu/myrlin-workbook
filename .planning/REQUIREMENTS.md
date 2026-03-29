@@ -165,9 +165,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **SRVR-01**: Server exposes GET /api/auth/pairing-code for QR generation
 - [x] **SRVR-02**: Server exposes POST /api/auth/pair for mobile token exchange
-- [ ] **SRVR-03**: Server exposes POST /api/push/register for device token storage
-- [ ] **SRVR-04**: Server exposes POST /api/push/unregister for device removal
-- [ ] **SRVR-05**: Server sends push via Expo Push API on session events
+- [x] **SRVR-03**: Server exposes POST /api/push/register for device token storage
+- [x] **SRVR-04**: Server exposes POST /api/push/unregister for device removal
+- [x] **SRVR-05**: Server sends push via Expo Push API on session events
 
 ### Testing
 
@@ -319,9 +319,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | NOTF-04 | Phase 6 | Pending |
 | NOTF-05 | Phase 6 | Pending |
 | NOTF-06 | Phase 6 | Pending |
-| SRVR-03 | Phase 6 | Pending |
-| SRVR-04 | Phase 6 | Pending |
-| SRVR-05 | Phase 6 | Pending |
+| SRVR-03 | Phase 6 | Complete |
+| SRVR-04 | Phase 6 | Complete |
+| SRVR-05 | Phase 6 | Complete |
 | SETT-01 | Phase 6 | Pending |
 | SETT-02 | Phase 6 | Pending |
 | SETT-03 | Phase 6 | Pending |
