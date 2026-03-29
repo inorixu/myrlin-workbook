@@ -189,11 +189,11 @@ Plans:
   2. QR payload contains all detected connection URLs (LAN, Tailscale, tunnel) so mobile can connect over any network path
   3. Paired devices tab in the modal shows each device with name, platform, last seen, push status, and working Revoke/Test Push buttons
   4. GET /api/server-info returns server capabilities and connection URLs without requiring auth (for mobile connection testing)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 09-01: Enhanced pairing endpoint, URL auto-detection (LAN, Tailscale, tunnel), server-info endpoint
-- [ ] 09-02: Desktop web UI: Pair Mobile button, QR modal with auto-refresh, device list with revoke and test push
+- [ ] 09-01-PLAN.md - Enhanced pairing with URL auto-detection (LAN, Tailscale, tunnel), server-info public endpoint
+- [ ] 09-02-PLAN.md - Desktop web UI: Pair Mobile header button, QR modal with auto-refresh, paired devices tab with revoke and test push
 
 ### Phase 10: Push Enhancement
 **Goal**: Push notifications are reliable, respect user preferences, include actionable data, and handle failures gracefully
