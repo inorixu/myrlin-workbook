@@ -278,7 +278,7 @@ Phase 8 is the critical foundation. After Phase 8:
 | 5. Data Screens | v1.0 | 4/4 | Complete | 2026-03-29 |
 | 6. Notifications and Settings | v1.0 | 3/3 | Complete | 2026-03-29 |
 | 7. Platform Polish and Testing | v1.0 | 3/3 | Complete | - |
-| 8. Token Persistence and Device Registry | v1.1 | 0/3 | Not started | - |
+| 8. Token Persistence and Device Registry | 1/3 | In Progress|  | - |
 | 9. Pairing Enhancement and Desktop UI | v1.1 | 0/2 | Not started | - |
 | 10. Push Enhancement | v1.1 | 0/3 | Not started | - |
 | 11. SSE and Sync Optimization | v1.1 | 0/3 | Not started | - |

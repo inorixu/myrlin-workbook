@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: server-mobile-support
-status: ready_to_plan
-stopped_at: null
-last_updated: "2026-03-29T08:00:00.000Z"
-last_activity: 2026-03-29 - Roadmap created for v1.1 (6 phases, 73 requirements mapped)
+status: executing
+stopped_at: Completed 08-01-PLAN.md
+last_updated: "2026-03-29T08:15:00.000Z"
+last_activity: 2026-03-29 - Completed Plan 08-01 (token persistence, CORS mobile support)
 progress:
-  total_phases: 6
-  completed_phases: 0
-  total_plans: 15
-  completed_plans: 0
+  total_phases: 13
+  completed_phases: 7
+  total_plans: 26
+  completed_plans: 24
   percent: 0
 ---
 
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-29)
 ## Current Position
 
 Phase: 8 of 13 (Token Persistence and Device Registry) - first phase of v1.1
-Plan: 0 of 3 in current phase
-Status: Ready to plan
-Last activity: 2026-03-29 - Roadmap created for v1.1 milestone
+Plan: 1 of 3 in current phase
+Status: Executing
+Last activity: 2026-03-29 - Completed Plan 08-01 (token persistence, CORS mobile support)
 
-Progress: [░░░░░░░░░░] 0% (v1.1)
+Progress: [███░░░░░░░] 33% (Phase 8)
 
 ## Performance Metrics
 
@@ -39,7 +39,11 @@ Progress: [░░░░░░░░░░] 0% (v1.1)
 - Average duration: 4.7m
 - Total execution time: ~1.8 hours
 
-**v1.1 metrics will be tracked starting Phase 8.**
+**v1.1 metrics:**
+
+| Phase | Plan | Duration | Tasks | Files |
+|-------|------|----------|-------|-------|
+| 08    | 01   | 3min     | 2     | 4     |
 
 ## Accumulated Context
 
@@ -50,6 +54,10 @@ Progress: [░░░░░░░░░░] 0% (v1.1)
 - v1.1 Roadmap: Testing requirements distributed across phases (each phase tests its own work)
 - v1.1 Roadmap: Token refresh (TOKN-05/06) placed in Phase 12 (API Enhancement) not Phase 8 (avoids scope creep on critical path)
 - v1.1 Roadmap: ERRR requirements isolated in Phase 13 (applies uniformly to all endpoints after they exist)
+
+- 08-01: Device tokens stored plaintext (matches pushDevices pattern; hashing deferred to Phase 12)
+- 08-01: CORS preflight allows Authorization from any origin (OPTIONS cannot carry Bearer)
+- 08-01: lastSeenAt debounced at 60s per device
 
 ### Pending Todos
 
@@ -62,5 +70,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-29
-Stopped at: Created v1.1 roadmap (73 requirements across 6 phases)
+Stopped at: Completed 08-01-PLAN.md (token persistence, CORS mobile support)
 Resume file: None

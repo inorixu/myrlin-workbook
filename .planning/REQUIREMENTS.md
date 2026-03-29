@@ -7,10 +7,10 @@
 
 ### Token Persistence
 
-- [ ] **TOKN-01**: Paired device tokens persist across server restarts (stored in state file)
-- [ ] **TOKN-02**: Server reloads all valid device tokens into active set on startup
-- [ ] **TOKN-03**: Expired device tokens (> 90 days) are automatically cleaned up on startup
-- [ ] **TOKN-04**: Token validation uses timing-safe comparison (existing pattern)
+- [x] **TOKN-01**: Paired device tokens persist across server restarts (stored in state file)
+- [x] **TOKN-02**: Server reloads all valid device tokens into active set on startup
+- [x] **TOKN-03**: Expired device tokens (> 90 days) are automatically cleaned up on startup
+- [x] **TOKN-04**: Token validation uses timing-safe comparison (existing pattern)
 - [ ] **TOKN-05**: Token refresh endpoint allows mobile to get new token before expiration
 - [ ] **TOKN-06**: Refreshed tokens immediately replace old tokens in active set and state
 
@@ -35,9 +35,9 @@
 
 ### CORS and Network
 
-- [ ] **CORS-01**: CORS allows requests from any origin when a valid Bearer token is present
-- [ ] **CORS-02**: CORS preflight (OPTIONS) responds correctly for mobile clients
-- [ ] **CORS-03**: Content-Security-Policy updated to allow mobile WebSocket connections from any host
+- [x] **CORS-01**: CORS allows requests from any origin when a valid Bearer token is present
+- [x] **CORS-02**: CORS preflight (OPTIONS) responds correctly for mobile clients
+- [x] **CORS-03**: Content-Security-Policy updated to allow mobile WebSocket connections from any host
 
 ### Push Notifications
 
@@ -146,10 +146,10 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| TOKN-01 | Phase 8 | Pending |
-| TOKN-02 | Phase 8 | Pending |
-| TOKN-03 | Phase 8 | Pending |
-| TOKN-04 | Phase 8 | Pending |
+| TOKN-01 | Phase 8 | Complete |
+| TOKN-02 | Phase 8 | Complete |
+| TOKN-03 | Phase 8 | Complete |
+| TOKN-04 | Phase 8 | Complete |
 | TOKN-05 | Phase 12 | Pending |
 | TOKN-06 | Phase 12 | Pending |
 | DEVC-01 | Phase 8 | Pending |
@@ -165,9 +165,9 @@
 | PAIR-05 | Phase 9 | Pending |
 | PAIR-06 | Phase 9 | Pending |
 | PAIR-07 | Phase 9 | Pending |
-| CORS-01 | Phase 8 | Pending |
-| CORS-02 | Phase 8 | Pending |
-| CORS-03 | Phase 8 | Pending |
+| CORS-01 | Phase 8 | Complete |
+| CORS-02 | Phase 8 | Complete |
+| CORS-03 | Phase 8 | Complete |
 | PUSH-01 | Phase 10 | Pending |
 | PUSH-02 | Phase 10 | Pending |
 | PUSH-03 | Phase 10 | Pending |
