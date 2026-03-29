@@ -205,12 +205,12 @@ Plans:
   3. User can configure per-device notification preferences (session complete, needs input, conflicts, task review) and only receives enabled categories
   4. Push notifications include deep link route and iOS badge count, enabling direct navigation on tap
   5. Integration tests verify retry logic, batching behavior, and preference filtering
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 10-01: Push retry with backoff, batching queue, stale token cleanup, rich payloads with deep links and badge count
-- [ ] 10-02: Push preferences API, preference checking in dispatch, event trigger wiring
-- [ ] 10-03: Integration tests for push retry, batching, and preference filtering
+- [ ] 10-01-PLAN.md - Push retry with exponential backoff, 2s batching queue, stale token cleanup, rich payloads with deep links and badge count
+- [ ] 10-02-PLAN.md - Per-device preference checking in dispatch, push preferences API endpoints, event trigger wiring with type and route
+- [ ] 10-03-PLAN.md - Integration tests for push retry, batching coalescing, and preference filtering
 
 ### Phase 11: SSE and Sync Optimization
 **Goal**: Mobile devices receive only relevant real-time events and can bootstrap all data in a single request
@@ -238,7 +238,7 @@ Plans:
   3. Mobile can fetch the last N lines of terminal scrollback without loading the full buffer
   4. Mobile app silently refreshes its auth token before expiration so the user never has to re-pair
   5. Integration tests verify pagination with various filter combinations
-**Plans**: 3 plans
+**Plans**: TBD
 
 Plans:
 - [ ] 12-01-PLAN.md - Session pagination (limit, offset, status, sort, search, workspaceId) with backward compatibility
