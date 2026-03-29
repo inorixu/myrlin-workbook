@@ -66,13 +66,13 @@ Plans:
   3. User can view session detail with metadata, cost, logs, subagents, tags, and use AI features (auto-title, summarize, save as template)
   4. User can create, rename, delete, reorder, and color workspaces with collapsible groups
   5. User can search sessions by keyword or AI-powered semantic search, and use the quick switcher modal
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 03-01: SSE client, session list with FlashList, real-time status, filter chips, pull-to-refresh
-- [ ] 03-02: Session detail, session CRUD (create, rename, delete, start, stop, restart, move, tags, templates)
-- [ ] 03-03: Workspace management (CRUD, reorder, colors, groups)
-- [ ] 03-04: Search (keyword, semantic, quick switcher) and conflict detection
+- [ ] 03-01-PLAN.md - Types, API client, SSE client, query hooks, session list with FlashList, filter chips, pull-to-refresh
+- [ ] 03-02-PLAN.md - Session detail, session CRUD (create, rename, delete, start, stop, restart, move, tags, templates, AI features)
+- [ ] 03-03-PLAN.md - Workspace management (CRUD, reorder, colors, groups)
+- [ ] 03-04-PLAN.md - Search (keyword, semantic, quick switcher) and conflict detection
 
 ### Phase 4: Terminal
 **Goal**: User can interact with terminal sessions on their phone with full input and output, including copy/paste, share, voice, and camera integration
