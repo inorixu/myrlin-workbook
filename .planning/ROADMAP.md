@@ -238,12 +238,12 @@ Plans:
   3. Mobile can fetch the last N lines of terminal scrollback without loading the full buffer
   4. Mobile app silently refreshes its auth token before expiration so the user never has to re-pair
   5. Integration tests verify pagination with various filter combinations
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 12-01: Session pagination (limit, offset, sort, filter, search, workspaceId) with backward compatibility
-- [ ] 12-02: Scrollback pagination, log pagination, token refresh endpoint
-- [ ] 12-03: Integration tests for session pagination
+- [ ] 12-01-PLAN.md - Session pagination (limit, offset, status, sort, search, workspaceId) with backward compatibility
+- [ ] 12-02-PLAN.md - Scrollback pagination, logs pagination, token refresh endpoint
+- [ ] 12-03-PLAN.md - Integration tests for session pagination, scrollback, logs, and token refresh
 
 ### Phase 13: Error Standards and Hardening
 **Goal**: All mobile-facing API responses follow consistent error conventions with machine-readable codes and versioning
