@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Mobile App
 status: executing
-stopped_at: Completed 11-02-PLAN.md
-last_updated: "2026-03-29T08:43:11.189Z"
+stopped_at: Completed 09-02-PLAN.md
+last_updated: "2026-03-29T08:45:48.493Z"
 last_activity: 2026-03-29 - Completed Plan 11-01 (SSE heartbeat and device-aware client registry)
 progress:
   total_phases: 13
-  completed_phases: 8
+  completed_phases: 9
   total_plans: 37
-  completed_plans: 33
+  completed_plans: 34
   percent: 73
 ---
 
@@ -53,6 +53,7 @@ Progress: [███████░░░] 73% (27/37 plans)
 | Phase 10 P02 | 3min | 2 tasks | 1 files |
 | Phase 12 P02 | 3min | 2 tasks | 4 files |
 | Phase 11 P02 | 2min | 2 tasks | 2 files |
+| Phase 09 P02 | 4min | 3 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -85,6 +86,8 @@ Progress: [███████░░░] 73% (27/37 plans)
 - [Phase 11]: Empty or null subscriptions = receive all events (backward compat with desktop)
 - [Phase 11]: workspace:created added to GLOBAL_EVENT_TYPES so new workspaces reach all clients
 - [Phase 11]: SSE client subscriptions updated in-place on POST, no reconnection needed
+- [Phase 09]: Client-side QR generation via esbuild-bundled qrcode browser build to vendor/
+- [Phase 09]: QR SVG uses theme --text color with transparent bg for all theme compat
 
 ### Pending Todos
 
@@ -96,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T08:43:11.185Z
-Stopped at: Completed 11-02-PLAN.md
+Last session: 2026-03-29T08:45:48.489Z
+Stopped at: Completed 09-02-PLAN.md
 Resume file: None

@@ -87,14 +87,14 @@
 
 ### Desktop Web UI
 
-- [ ] **DWUI-01**: "Pair Mobile" button visible in header bar
-- [ ] **DWUI-02**: Pair Mobile modal shows QR code generated from /api/auth/pairing-code
-- [ ] **DWUI-03**: QR code auto-refreshes every 4 minutes (tokens expire at 5)
-- [ ] **DWUI-04**: Modal shows all detected connection URLs (LAN, Tailscale, tunnel)
-- [ ] **DWUI-05**: Modal shows paired devices list with name, platform, last seen, push status
-- [ ] **DWUI-06**: Each paired device has a "Revoke" button with confirmation
-- [ ] **DWUI-07**: Each paired device has a "Test Push" button
-- [ ] **DWUI-08**: QR code rendered as SVG using qrcode library
+- [x] **DWUI-01**: "Pair Mobile" button visible in header bar
+- [x] **DWUI-02**: Pair Mobile modal shows QR code generated from /api/auth/pairing-code
+- [x] **DWUI-03**: QR code auto-refreshes every 4 minutes (tokens expire at 5)
+- [x] **DWUI-04**: Modal shows all detected connection URLs (LAN, Tailscale, tunnel)
+- [x] **DWUI-05**: Modal shows paired devices list with name, platform, last seen, push status
+- [x] **DWUI-06**: Each paired device has a "Revoke" button with confirmation
+- [x] **DWUI-07**: Each paired device has a "Test Push" button
+- [x] **DWUI-08**: QR code rendered as SVG using qrcode library
 
 ### Scrollback and Logs
 
@@ -199,14 +199,14 @@
 | PAGE-05 | Phase 12 | Complete |
 | PAGE-06 | Phase 12 | Complete |
 | PAGE-07 | Phase 12 | Complete |
-| DWUI-01 | Phase 9 | Pending |
-| DWUI-02 | Phase 9 | Pending |
-| DWUI-03 | Phase 9 | Pending |
-| DWUI-04 | Phase 9 | Pending |
-| DWUI-05 | Phase 9 | Pending |
-| DWUI-06 | Phase 9 | Pending |
-| DWUI-07 | Phase 9 | Pending |
-| DWUI-08 | Phase 9 | Pending |
+| DWUI-01 | Phase 9 | Complete |
+| DWUI-02 | Phase 9 | Complete |
+| DWUI-03 | Phase 9 | Complete |
+| DWUI-04 | Phase 9 | Complete |
+| DWUI-05 | Phase 9 | Complete |
+| DWUI-06 | Phase 9 | Complete |
+| DWUI-07 | Phase 9 | Complete |
+| DWUI-08 | Phase 9 | Complete |
 | SCRL-01 | Phase 12 | Complete |
 | SCRL-02 | Phase 12 | Complete |
 | SCRL-03 | Phase 12 | Complete |
