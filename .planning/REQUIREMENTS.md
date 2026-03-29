@@ -11,8 +11,8 @@
 - [x] **TOKN-02**: Server reloads all valid device tokens into active set on startup
 - [x] **TOKN-03**: Expired device tokens (> 90 days) are automatically cleaned up on startup
 - [x] **TOKN-04**: Token validation uses timing-safe comparison (existing pattern)
-- [ ] **TOKN-05**: Token refresh endpoint allows mobile to get new token before expiration
-- [ ] **TOKN-06**: Refreshed tokens immediately replace old tokens in active set and state
+- [x] **TOKN-05**: Token refresh endpoint allows mobile to get new token before expiration
+- [x] **TOKN-06**: Refreshed tokens immediately replace old tokens in active set and state
 
 ### Device Registry
 
@@ -43,14 +43,14 @@
 
 - [x] **PUSH-01**: Push dispatch retries failed sends with exponential backoff (max 3 attempts)
 - [x] **PUSH-02**: Push events are batched in a 2-second window (5 events in 1s = 1 summary push)
-- [ ] **PUSH-03**: Per-device push preferences (sessionComplete, needsInput, conflicts, taskReview) stored in device record
-- [ ] **PUSH-04**: Push dispatch checks device preferences before sending
+- [x] **PUSH-03**: Per-device push preferences (sessionComplete, needsInput, conflicts, taskReview) stored in device record
+- [x] **PUSH-04**: Push dispatch checks device preferences before sending
 - [x] **PUSH-05**: Push payloads include deep link route data for mobile navigation
 - [x] **PUSH-06**: Push includes badge count (running sessions) for iOS
 - [x] **PUSH-07**: Stale push tokens (DeviceNotRegistered) are automatically cleaned from device registry
-- [ ] **PUSH-08**: GET /api/push/preferences returns device's notification preferences
-- [ ] **PUSH-09**: PUT /api/push/preferences updates device's notification preferences
-- [ ] **PUSH-10**: Push dispatched for: session complete, needs input, file conflicts, task ready for review
+- [x] **PUSH-08**: GET /api/push/preferences returns device's notification preferences
+- [x] **PUSH-09**: PUT /api/push/preferences updates device's notification preferences
+- [x] **PUSH-10**: Push dispatched for: session complete, needs input, file conflicts, task ready for review
 
 ### SSE Enhancement
 
@@ -98,9 +98,9 @@
 
 ### Scrollback and Logs
 
-- [ ] **SCRL-01**: GET /api/sessions/:id/scrollback returns paginated terminal scrollback
-- [ ] **SCRL-02**: Scrollback supports lines and from parameters (from=end for last N lines)
-- [ ] **SCRL-03**: GET /api/sessions/:id/logs supports limit and offset pagination
+- [x] **SCRL-01**: GET /api/sessions/:id/scrollback returns paginated terminal scrollback
+- [x] **SCRL-02**: Scrollback supports lines and from parameters (from=end for last N lines)
+- [x] **SCRL-03**: GET /api/sessions/:id/logs supports limit and offset pagination
 
 ### Error Standards
 
@@ -150,8 +150,8 @@
 | TOKN-02 | Phase 8 | Complete |
 | TOKN-03 | Phase 8 | Complete |
 | TOKN-04 | Phase 8 | Complete |
-| TOKN-05 | Phase 12 | Pending |
-| TOKN-06 | Phase 12 | Pending |
+| TOKN-05 | Phase 12 | Complete |
+| TOKN-06 | Phase 12 | Complete |
 | DEVC-01 | Phase 8 | Complete |
 | DEVC-02 | Phase 8 | Complete |
 | DEVC-03 | Phase 8 | Complete |
@@ -170,14 +170,14 @@
 | CORS-03 | Phase 8 | Complete |
 | PUSH-01 | Phase 10 | Complete |
 | PUSH-02 | Phase 10 | Complete |
-| PUSH-03 | Phase 10 | Pending |
-| PUSH-04 | Phase 10 | Pending |
+| PUSH-03 | Phase 10 | Complete |
+| PUSH-04 | Phase 10 | Complete |
 | PUSH-05 | Phase 10 | Complete |
 | PUSH-06 | Phase 10 | Complete |
 | PUSH-07 | Phase 10 | Complete |
-| PUSH-08 | Phase 10 | Pending |
-| PUSH-09 | Phase 10 | Pending |
-| PUSH-10 | Phase 10 | Pending |
+| PUSH-08 | Phase 10 | Complete |
+| PUSH-09 | Phase 10 | Complete |
+| PUSH-10 | Phase 10 | Complete |
 | SSE-01 | Phase 11 | Complete |
 | SSE-02 | Phase 11 | Complete |
 | SSE-03 | Phase 11 | Complete |
@@ -207,9 +207,9 @@
 | DWUI-06 | Phase 9 | Pending |
 | DWUI-07 | Phase 9 | Pending |
 | DWUI-08 | Phase 9 | Pending |
-| SCRL-01 | Phase 12 | Pending |
-| SCRL-02 | Phase 12 | Pending |
-| SCRL-03 | Phase 12 | Pending |
+| SCRL-01 | Phase 12 | Complete |
+| SCRL-02 | Phase 12 | Complete |
+| SCRL-03 | Phase 12 | Complete |
 | ERRR-01 | Phase 13 | Pending |
 | ERRR-02 | Phase 13 | Pending |
 | ERRR-03 | Phase 13 | Pending |

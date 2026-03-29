@@ -280,7 +280,7 @@ Phase 8 is the critical foundation. After Phase 8:
 | 7. Platform Polish and Testing | v1.0 | 3/3 | Complete | - |
 | 8. Token Persistence and Device Registry | 1/3 | In Progress|  | - |
 | 9. Pairing Enhancement and Desktop UI | v1.1 | 0/2 | Not started | - |
-| 10. Push Enhancement | 1/3 | In Progress|  | - |
+| 10. Push Enhancement | 2/3 | In Progress|  | - |
 | 11. SSE and Sync Optimization | 1/3 | In Progress|  | - |
-| 12. API Enhancement | v1.1 | 1/3 | In Progress | - |
+| 12. API Enhancement | 2/3 | In Progress|  | - |
 | 13. Error Standards and Hardening | v1.1 | 0/1 | Not started | - |

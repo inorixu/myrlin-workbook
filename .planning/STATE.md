@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: Mobile App
 status: executing
-stopped_at: Completed 12-01-PLAN.md
-last_updated: "2026-03-29T08:37:40Z"
-last_activity: 2026-03-29 - Completed Plan 12-01 (paginated sessions endpoint)
+stopped_at: Completed 12-02-PLAN.md
+last_updated: "2026-03-29T08:42:57.342Z"
+last_activity: 2026-03-29 - Completed Plan 11-01 (SSE heartbeat and device-aware client registry)
 progress:
   total_phases: 13
   completed_phases: 8
   total_plans: 37
-  completed_plans: 30
-  percent: 81
+  completed_plans: 33
+  percent: 73
 ---
 
 # Project State
@@ -50,6 +50,8 @@ Progress: [███████░░░] 73% (27/37 plans)
 | Phase 09 P01 | 2min | 2 tasks | 2 files |
 | Phase 10 P01 | 2min | 2 tasks | 1 files |
 | 12    | 01   | 3min     | 2     | 2     |
+| Phase 10 P02 | 3min | 2 tasks | 1 files |
+| Phase 12 P02 | 3min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -76,6 +78,9 @@ Progress: [███████░░░] 73% (27/37 plans)
 - [Phase 10]: 10-01: Module-level Map + setTimeout for 2-second push batching window
 - 12-01: Dual-mode endpoint detection (mode param = legacy, pagination params = new response shape)
 - 12-01: Default no-params returns legacy { sessions } for backward compat with existing GUI
+- [Phase 10]: shouldNotify defaults to true for unknown event types and missing preferences (fail-open)
+- [Phase 12]: Scrollback joins buffer chunks then splits by newline for accurate line counting
+- [Phase 12]: Token refresh only for device tokens (403 for browser tokens) as security boundary
 
 ### Pending Todos
 
@@ -87,6 +92,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T08:37:23.541Z
-Stopped at: Completed 10-01-PLAN.md
+Last session: 2026-03-29T08:42:53.076Z
+Stopped at: Completed 12-02-PLAN.md
 Resume file: None
