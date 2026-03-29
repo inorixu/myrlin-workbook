@@ -4,7 +4,7 @@ milestone: v1.0
 milestone_name: Mobile App
 status: executing
 stopped_at: Completed 12-02-PLAN.md
-last_updated: "2026-03-29T08:42:57.342Z"
+last_updated: "2026-03-29T08:43:03.374Z"
 last_activity: 2026-03-29 - Completed Plan 11-01 (SSE heartbeat and device-aware client registry)
 progress:
   total_phases: 13
@@ -52,6 +52,7 @@ Progress: [███████░░░] 73% (27/37 plans)
 | 12    | 01   | 3min     | 2     | 2     |
 | Phase 10 P02 | 3min | 2 tasks | 1 files |
 | Phase 12 P02 | 3min | 2 tasks | 4 files |
+| Phase 11 P02 | 2min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,8 @@ Progress: [███████░░░] 73% (27/37 plans)
 - [Phase 10]: shouldNotify defaults to true for unknown event types and missing preferences (fail-open)
 - [Phase 12]: Scrollback joins buffer chunks then splits by newline for accurate line counting
 - [Phase 12]: Token refresh only for device tokens (403 for browser tokens) as security boundary
+- [Phase 11]: Empty or null subscriptions = receive all events (backward compat with desktop)
+- [Phase 11]: workspace:created added to GLOBAL_EVENT_TYPES so new workspaces reach all clients
 
 ### Pending Todos
 
