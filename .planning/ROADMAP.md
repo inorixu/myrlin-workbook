@@ -173,12 +173,12 @@ Plans:
   3. Desktop web UI user can revoke a paired device, which immediately disconnects it and invalidates its token
   4. Mobile requests from LAN, Tailscale, or tunnel IPs succeed with a valid Bearer token (not blocked by CORS)
   5. Integration tests verify token persistence across restart and device CRUD operations
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 08-01: Token persistence in store.js, startup reload, expiration cleanup, CORS middleware
-- [ ] 08-02: Device registry (pairedDevices CRUD), device management API endpoints, lastSeenAt tracking
-- [ ] 08-03: Integration tests for token persistence and device CRUD
+- [ ] 08-01-PLAN.md - Token persistence in store.js, auth reload on startup, expiration cleanup, CORS middleware, enhanced pairing
+- [ ] 08-02-PLAN.md - Device registry CRUD module, device management API endpoints, SSE token tracking
+- [ ] 08-03-PLAN.md - Integration tests for token persistence and device CRUD operations
 
 ### Phase 9: Pairing Enhancement and Desktop UI
 **Goal**: Users can pair their phone from the desktop web UI with automatic network detection and a polished QR code experience
